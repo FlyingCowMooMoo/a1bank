@@ -13,9 +13,8 @@ class UserRepository {
 
 
     init() {
-        self.createUser("user1", "user")
-        self.createUser("user2", password: "user")
     }
+
 
     func getUser(userName: String) -> User? {
         for user in users {
@@ -32,7 +31,7 @@ class UserRepository {
             return false
         }
 
-        self.users.insert(User(id: users.count + 1, userName: userName, password: password))
+        self.users.insert(User(id: CUnsignedLong(users.count), userName: userName, password: password))
         return true
     }
 
