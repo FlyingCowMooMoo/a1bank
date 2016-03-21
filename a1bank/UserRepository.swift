@@ -12,9 +12,30 @@ class UserRepository {
     var users = Set<User>()
 
 
-    func getUser(userName: String) -> User {
-
+    init() {
+        self.createUser("user1", "user")
+        self.createUser("user2", password: "user")
     }
+
+    func getUser(userName: String) -> User? {
+        for user in users {
+            if (user.userName.lowercaseString == userName.lowercaseString) {
+                return user
+            }
+        }
+
+        return nil
+    }
+
+    func createUser(userName: String, password: String) -> Bool {
+        if (getUser(userName) != nil) {
+            return false
+        }
+
+        self.users.insert(User(id: users.count + 1, userName: userName, password: password))
+        return true
+    }
+
 }
 
 

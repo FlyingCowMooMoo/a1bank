@@ -18,6 +18,12 @@ class User: Hashable {
         self.password = password
     }
 
+    var hashValue: Int {
+        get {
+            return self.id.hashValue
+        }
+    }
+
 
 }
 
