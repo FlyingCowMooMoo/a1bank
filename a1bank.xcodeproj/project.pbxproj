@@ -18,6 +18,8 @@
 		1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */; };
 		1D104CACD1C5E5A8FD922A2F /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
 		1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
+		DE67C4591CA8F15800A7151C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE67C4581CA8F15800A7151C /* logo.png */; };
+		DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */; };
 		DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D551C9FC67C00D55A8B /* AppDelegate.swift */; };
 		DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D571C9FC67C00D55A8B /* ViewController.swift */; };
 		DE745D5B1C9FC67C00D55A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE745D591C9FC67C00D55A8B /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountRepository.swift; sourceTree = "<group>"; };
 		1D1049C087431EF6124746A7 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		DE67C4581CA8F15800A7151C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE745D521C9FC67C00D55A8B /* a1bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a1bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE745D551C9FC67C00D55A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE745D571C9FC67C00D55A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				DE745D571C9FC67C00D55A8B /* ViewController.swift */,
 				DE745D591C9FC67C00D55A8B /* Main.storyboard */,
 				DE745D5C1C9FC67C00D55A8B /* Assets.xcassets */,
+				DE67C4581CA8F15800A7151C /* logo.png */,
 				DE745D5E1C9FC67C00D55A8B /* LaunchScreen.storyboard */,
 				DE745D611C9FC67C00D55A8B /* Info.plist */,
 				DE745D831C9FC6B200D55A8B /* UserRepository.swift */,
@@ -127,6 +132,7 @@
 				1D104197DB41E9619F315D37 /* BankAccount.swift */,
 				1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */,
 				1D104EE93767DE801F84DC8C /* ApplicationService.swift */,
+				DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */,
 			);
 			path = a1bank;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE67C4591CA8F15800A7151C /* logo.png in Resources */,
 				DE745D601C9FC67C00D55A8B /* LaunchScreen.storyboard in Resources */,
 				DE745D5D1C9FC67C00D55A8B /* Assets.xcassets in Resources */,
 				DE745D5B1C9FC67C00D55A8B /* Main.storyboard in Resources */,
@@ -280,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */,
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
@@ -520,6 +528,7 @@
 				DE745D7C1C9FC67C00D55A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE745D7D1C9FC67C00D55A8B /* Build configuration list for PBXNativeTarget "a1bankTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +537,7 @@
 				DE745D7F1C9FC67C00D55A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE745D801C9FC67C00D55A8B /* Build configuration list for PBXNativeTarget "a1bankUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +546,7 @@
 				DE745D821C9FC67C00D55A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
