@@ -1,5 +1,5 @@
 //
-// Created by Panagiotis Papasyamatis on 21/03/2016.
+// Created by Panagiotis Papastamatis on 21/03/2016.
 // Copyright (c) 2016 Panagiotis Papastamatis. All rights reserved.
 //
 
