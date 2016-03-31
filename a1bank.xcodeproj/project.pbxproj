@@ -20,6 +20,9 @@
 		1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
 		DE67C4591CA8F15800A7151C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE67C4581CA8F15800A7151C /* logo.png */; };
 		DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */; };
+		DE67C45F1CA9087800A7151C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45E1CA9087800A7151C /* AccountViewController.swift */; };
+		DE67C4611CA90C7900A7151C /* BankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C4601CA90C7900A7151C /* BankAccountViewController.swift */; };
+		DE67C4631CA922DD00A7151C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C4621CA922DD00A7151C /* HomeController.swift */; };
 		DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D551C9FC67C00D55A8B /* AppDelegate.swift */; };
 		DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D571C9FC67C00D55A8B /* ViewController.swift */; };
 		DE745D5B1C9FC67C00D55A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE745D591C9FC67C00D55A8B /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		DE67C4581CA8F15800A7151C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DE67C45E1CA9087800A7151C /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		DE67C4601CA90C7900A7151C /* BankAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountViewController.swift; sourceTree = "<group>"; };
+		DE67C4621CA922DD00A7151C /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		DE745D521C9FC67C00D55A8B /* a1bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a1bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE745D551C9FC67C00D55A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE745D571C9FC67C00D55A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 				1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */,
 				1D104EE93767DE801F84DC8C /* ApplicationService.swift */,
 				DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */,
+				DE67C45E1CA9087800A7151C /* AccountViewController.swift */,
+				DE67C4601CA90C7900A7151C /* BankAccountViewController.swift */,
+				DE67C4621CA922DD00A7151C /* HomeController.swift */,
 			);
 			path = a1bank;
 			sourceTree = "<group>";
@@ -291,8 +300,11 @@
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
+				DE67C4611CA90C7900A7151C /* BankAccountViewController.swift in Sources */,
 				1D104A6CF02BDFC4F6C1F9D6 /* User.swift in Sources */,
 				1D104AC336AACBF41D63A564 /* BankAccount.swift in Sources */,
+				DE67C45F1CA9087800A7151C /* AccountViewController.swift in Sources */,
+				DE67C4631CA922DD00A7151C /* HomeController.swift in Sources */,
 				1D1049764C459D11ADF1F962 /* readme.md in Sources */,
 				1D1047CC60ACE12D99FEC553 /* BankAccountRepository.swift in Sources */,
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
@@ -447,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.student.s3402299.a1bank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -458,6 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.student.s3402299.a1bank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
