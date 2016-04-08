@@ -12,9 +12,13 @@ class BankAccountListViewCell: UITableViewCell {
 
     @IBOutlet weak var bankAccountNameValue: UILabel!
     @IBOutlet weak var bankAccountBalanceValue: UILabel!
+    
+    var bankAccount: BankAccount!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        bankAccountNameValue.text = bankAccount.friendlyName
+        bankAccountBalanceValue.text = String(bankAccount.balance)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
