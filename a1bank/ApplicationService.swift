@@ -52,9 +52,12 @@ class ApplicationService {
         var accs = Set<BankAccount>()
         var user = instance.userRepository.getUser(userName)
 
+        print("Getting account for user " + userName)
         if let user = instance.userRepository.getUser(userName) {
             accs = instance.bankAccountRepository.getAllAccountsOfUser(user.id)
+            print("Valid user")
         }
+        print("NUmber of accounts is " + String(accs.count))
         return accs
     }
     

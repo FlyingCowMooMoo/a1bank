@@ -27,6 +27,9 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         
         accountsTableView.delegate = self
         accountsTableView.dataSource = self
+        
+        //register custom cell from nib
+        
     }
 
 
@@ -46,7 +49,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "CustomCell")
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "CustomCell")
+        tableView.registerNib(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: <#T##String#>)
         var cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! BankAccountListViewCell
         cell.bankAccount = self.accounts[indexPath.row] as! BankAccount
         return cell
