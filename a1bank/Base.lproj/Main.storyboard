@@ -391,19 +391,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-D0-AwN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-D0-AwN">
                                 <rect key="frame" x="185" y="113" width="236" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="iRa-vb-K4q"/>
+                                    <constraint firstAttribute="width" constant="236" id="mny-S8-tfV"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="DC4-bJ-Gux" id="xoc-GI-F2v"/>
                                     <outlet property="delegate" destination="DC4-bJ-Gux" id="Iaz-nB-dxE"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
                                 <rect key="frame" x="179" y="28" width="242" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="aFO-lT-1Li"/>
+                                </constraints>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -414,9 +417,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="aLT-D0-AwN" secondAttribute="bottom" constant="20" symbolic="YES" id="VPj-bo-8Tg"/>
-                            <constraint firstItem="YrL-ac-wUo" firstAttribute="centerX" secondItem="q0q-xu-uY2" secondAttribute="centerX" id="VSb-K9-PCq"/>
-                            <constraint firstItem="YrL-ac-wUo" firstAttribute="top" secondItem="2QB-w0-8bO" secondAttribute="bottom" id="uLg-fm-KrB"/>
+                            <constraint firstItem="YrL-ac-wUo" firstAttribute="top" secondItem="2QB-w0-8bO" secondAttribute="bottom" constant="8" symbolic="YES" id="4v8-rf-NJY"/>
+                            <constraint firstItem="YrL-ac-wUo" firstAttribute="trailing" secondItem="aLT-D0-AwN" secondAttribute="trailing" id="Kan-vp-kPt"/>
+                            <constraint firstItem="aLT-D0-AwN" firstAttribute="top" secondItem="YrL-ac-wUo" secondAttribute="bottom" constant="55" id="dLm-Dc-dGa"/>
+                            <constraint firstAttribute="bottom" secondItem="aLT-D0-AwN" secondAttribute="bottom" constant="20" symbolic="YES" id="wNE-OW-Dmv"/>
+                            <constraint firstItem="YrL-ac-wUo" firstAttribute="centerX" secondItem="q0q-xu-uY2" secondAttribute="centerX" id="zvC-ov-f9B"/>
                         </constraints>
                     </view>
                 </viewController>
