@@ -31,6 +31,7 @@
 		DE745D6B1C9FC67C00D55A8B /* a1bankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D6A1C9FC67C00D55A8B /* a1bankTests.swift */; };
 		DE745D761C9FC67C00D55A8B /* a1bankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D751C9FC67C00D55A8B /* a1bankUITests.swift */; };
 		DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D831C9FC6B200D55A8B /* UserRepository.swift */; };
+		DEB9A6481CB74C6F007A0940 /* BankAccountTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB9A6471CB74C6F007A0940 /* BankAccountTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DE745D751C9FC67C00D55A8B /* a1bankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a1bankUITests.swift; sourceTree = "<group>"; };
 		DE745D771C9FC67C00D55A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE745D831C9FC6B200D55A8B /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		DEB9A6471CB74C6F007A0940 /* BankAccountTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankAccountTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				DE67C45E1CA9087800A7151C /* AccountViewController.swift */,
 				DE67C4601CA90C7900A7151C /* BankAccountViewController.swift */,
 				DE67C4621CA922DD00A7151C /* HomeController.swift */,
+				DEB9A6471CB74C6F007A0940 /* BankAccountTableCell.xib */,
 			);
 			path = a1bank;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				DE67C4591CA8F15800A7151C /* logo.png in Resources */,
 				DE745D601C9FC67C00D55A8B /* LaunchScreen.storyboard in Resources */,
+				DEB9A6481CB74C6F007A0940 /* BankAccountTableCell.xib in Resources */,
 				DE745D5D1C9FC67C00D55A8B /* Assets.xcassets in Resources */,
 				DE745D5B1C9FC67C00D55A8B /* Main.storyboard in Resources */,
 			);

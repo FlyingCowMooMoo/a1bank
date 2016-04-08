@@ -391,40 +391,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XL-O5-gMG">
-                                <rect key="frame" x="179" y="84" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usernamevalue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-6R-hYo">
-                                <rect key="frame" x="294" y="84" width="127" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F77-00-RwX">
-                                <rect key="frame" x="179" y="55" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="customeridvalue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSP-fd-oGo">
-                                <rect key="frame" x="294" y="58" width="127" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
-                                <rect key="frame" x="179" y="20" width="242" height="30"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutPressed:" destination="DC4-bJ-Gux" eventType="touchDown" id="fu2-gE-Xub"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-D0-AwN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-D0-AwN">
                                 <rect key="frame" x="185" y="113" width="236" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -435,34 +402,27 @@
                                     <outlet property="delegate" destination="DC4-bJ-Gux" id="Iaz-nB-dxE"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
+                                <rect key="frame" x="179" y="28" width="242" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="DC4-bJ-Gux" eventType="touchDown" id="fu2-gE-Xub"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dSP-fd-oGo" firstAttribute="trailing" secondItem="YrL-ac-wUo" secondAttribute="trailing" id="710-7r-ExC"/>
-                            <constraint firstItem="2XL-O5-gMG" firstAttribute="leading" secondItem="F77-00-RwX" secondAttribute="leading" id="76Z-JK-Qzd"/>
-                            <constraint firstItem="dSP-fd-oGo" firstAttribute="top" secondItem="YrL-ac-wUo" secondAttribute="bottom" constant="8" symbolic="YES" id="KKe-Im-BzL"/>
-                            <constraint firstItem="4Gg-6R-hYo" firstAttribute="leading" secondItem="dSP-fd-oGo" secondAttribute="leading" id="M06-rv-yQc"/>
-                            <constraint firstItem="dSP-fd-oGo" firstAttribute="leading" secondItem="F77-00-RwX" secondAttribute="trailing" constant="14" id="NCA-5N-fkJ"/>
-                            <constraint firstItem="F77-00-RwX" firstAttribute="leading" secondItem="YrL-ac-wUo" secondAttribute="leading" id="Pru-mj-fU5"/>
-                            <constraint firstItem="4Gg-6R-hYo" firstAttribute="trailing" secondItem="aLT-D0-AwN" secondAttribute="trailing" id="QTe-p7-JNX"/>
-                            <constraint firstItem="2XL-O5-gMG" firstAttribute="baseline" secondItem="4Gg-6R-hYo" secondAttribute="baseline" id="Rdx-81-NZO"/>
                             <constraint firstAttribute="bottom" secondItem="aLT-D0-AwN" secondAttribute="bottom" constant="20" symbolic="YES" id="VPj-bo-8Tg"/>
                             <constraint firstItem="YrL-ac-wUo" firstAttribute="centerX" secondItem="q0q-xu-uY2" secondAttribute="centerX" id="VSb-K9-PCq"/>
-                            <constraint firstItem="aLT-D0-AwN" firstAttribute="top" secondItem="2XL-O5-gMG" secondAttribute="bottom" constant="8" symbolic="YES" id="Zww-gy-Nlq"/>
-                            <constraint firstItem="2XL-O5-gMG" firstAttribute="top" secondItem="F77-00-RwX" secondAttribute="bottom" constant="8" symbolic="YES" id="dro-Zx-RBv"/>
                             <constraint firstItem="YrL-ac-wUo" firstAttribute="top" secondItem="2QB-w0-8bO" secondAttribute="bottom" id="uLg-fm-KrB"/>
-                            <constraint firstItem="4Gg-6R-hYo" firstAttribute="trailing" secondItem="dSP-fd-oGo" secondAttribute="trailing" id="vnA-Pe-V3S"/>
-                            <constraint firstItem="F77-00-RwX" firstAttribute="top" secondItem="YrL-ac-wUo" secondAttribute="bottom" constant="5" id="xUp-4k-gpY"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="customerIdLabelValue" destination="dSP-fd-oGo" id="tj6-u2-9dc"/>
-                        <outlet property="usernameLabelValue" destination="4Gg-6R-hYo" id="oRr-NO-6af"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6s-co-rN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="490"/>
+            <point key="canvasLocation" x="787" y="505"/>
         </scene>
     </scenes>
     <resources>
