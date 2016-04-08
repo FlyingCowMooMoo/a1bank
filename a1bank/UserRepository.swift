@@ -2,7 +2,7 @@
 //  UserRepository.swift
 //  a1bank
 //
-//  Created by Panagiotis Papasyamatis on 21/03/2016.
+//  Created by Panagiotis Papastamatis on 21/03/2016.
 //  Copyright © 2016 Panagiotis Papastamatis. All rights reserved.
 //
 

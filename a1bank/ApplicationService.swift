@@ -20,6 +20,7 @@ class ApplicationService {
         //populate dummy data
         for var i = 0; i < 20; ++i {
             if (self.userRepository!.createUser("user\(i)", password: "password")) {
+                
                 let account = self.userRepository!.getUser("user\(i)")
                 if (account != nil) {
                     let numberOfAccounts = Int(arc4random_uniform(UInt32(5)))

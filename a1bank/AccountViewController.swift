@@ -20,8 +20,10 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     var username : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(username)
         //Convert to array cause I am not sure how to bind sets to a table view
         accounts = Array(applicationService.getUserAccounts(username))
+        print(accounts)
         
         accountsTableView.delegate = self
         accountsTableView.dataSource = self
@@ -39,6 +41,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.accounts.count)
         return self.accounts.count ?? 0
     }
     

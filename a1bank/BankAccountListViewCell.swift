@@ -2,7 +2,7 @@
 //  BankAccountListViewCell.swift
 //  a1bank
 //
-//  Created by Panagiotis Papasyamatis on 8/04/2016.
+//  Created by Panagiotis Papastamatis on 8/04/2016.
 //  Copyright © 2016 Panagiotis Papastamatis. All rights reserved.
 //
 
