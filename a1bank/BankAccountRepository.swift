@@ -8,20 +8,23 @@ import Foundation
 
 class BankAccountRepository {
 
-    var accounts = Set<BankAccount>()
-
+    private var accounts = Set<BankAccount>()
+    
     init() {
     }
 
     func createAccount(balance: Double, ownerId: CUnsignedLong, friendlyName: String) -> Bool {
         for account in self.accounts {
-            if (account.id == ownerId) {
+            if (account.owner == ownerId) {
+                print("no")
                 return false
             }
         }
-
-        self.accounts.insert(BankAccount(id: CUnsignedLong(accounts.count + 1), balance: balance, ownerId: ownerId,
-                friendName: friendlyName))
+        let b = BankAccount(id: CUnsignedLong(accounts.count + 1), balance: balance, ownerId: ownerId,
+            friendName: friendlyName)
+        self.accounts.insert(b)
+        
+        print(b)
         return true
     }
 

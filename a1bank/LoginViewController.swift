@@ -13,13 +13,14 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
-    private var applicationService = ApplicationService.applicationService
+    private var applicationService = ApplicationService.instance
     @IBOutlet weak var errorLabel: UILabel!
     var hasErrors:Bool = false
     var validUsername:String!
     override func viewDidLoad() {
         
-        self.applicationService = ApplicationService.applicationService
+        self.applicationService = ApplicationService.instance
+        ApplicationService.populateData()
         
         super.viewDidLoad()
         if(self.hasErrors == false)
@@ -48,7 +49,7 @@ class LoginViewController: UIViewController {
         let username:String = usernameText.text! as String
         let password:String = passwordText.text! as String
         
-        let result = applicationService.authenticateUser(username, password: password as String)
+        let result = ApplicationService.authenticateUser(username, password: password as String)
         if(result)
         {
             //let controller  = storyboard?.instantiateViewControllerWithIdentifier("accountViewController") as! //AccountViewController

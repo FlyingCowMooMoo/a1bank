@@ -5,38 +5,41 @@
 
 import Foundation
 
-
 class ApplicationService {
 
-    var userRepository: UserRepository?
-    var bankAccountRepository: BankAccountRepository?
+    var userRepository = UserRepository()
+    var bankAccountRepository = BankAccountRepository()
     
-    static let applicationService = ApplicationService()
-
-    init() {
-        self.bankAccountRepository = BankAccountRepository()
-        self.userRepository = UserRepository()
-
+    static let instance = ApplicationService()
+    
+    private init()
+    {
+        
+    }
+    
+    static func populateData()
+    {
         //populate dummy data
-        for var i = 0; i < 20; ++i {
-            if (self.userRepository!.createUser("user\(i)", password: "password")) {
+        for var i = 0; i < 20; ++i
+        {
+            if (instance.userRepository.createUser("user\(i)", password: "password")) {
                 
-                let account = self.userRepository!.getUser("user\(i)")
+                let account = instance.userRepository.getUser("user\(i)")
                 if (account != nil) {
                     let numberOfAccounts = Int(arc4random_uniform(UInt32(5)))
                     for var j = 0; j < numberOfAccounts; ++j {
-                        self.bankAccountRepository!.createAccount(Double(numberOfAccounts) * 1.3, ownerId: account!.id,
-                                friendlyName: "Personal Savings\(j)")
+                        instance.bankAccountRepository.createAccount(Double(numberOfAccounts) * 1.3, ownerId: account!.id,
+                            friendlyName: "Personal Savings\(j)")
                     }
                 }
             }
         }
     }
 
-    func authenticateUser(userName: String, password: String) -> Bool {
-        let user = self.userRepository!.getUser(userName)
+    static func authenticateUser(userName: String, password: String) -> Bool {
+        let user = instance.userRepository.getUser(userName)
 
-        if let user = self.userRepository!.getUser(userName) {
+        if let user = instance.userRepository.getUser(userName) {
             if (user.password == password) {
                 return true
             }
@@ -45,15 +48,17 @@ class ApplicationService {
         return false
     }
 
-    func getUserAccounts(userName: String) -> Set<BankAccount> {
+    static func getUserAccounts(userName: String) -> Set<BankAccount> {
         var accs = Set<BankAccount>()
-        var user = self.userRepository!.getUser(userName)
+        var user = instance.userRepository.getUser(userName)
 
-        if let user = self.userRepository!.getUser(userName) {
-            accs = self.bankAccountRepository!.getAllAccountsOfUser(user.id)
+        if let user = instance.userRepository.getUser(userName) {
+            accs = instance.bankAccountRepository.getAllAccountsOfUser(user.id)
         }
         return accs
     }
+    
+
 
 
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var applicationService = ApplicationService.applicationService
+    private var applicationService = ApplicationService.instance
 
     
     @IBOutlet weak var accountsTableView: UITableView!
@@ -22,7 +22,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         print(username)
         //Convert to array cause I am not sure how to bind sets to a table view
-        accounts = Array(applicationService.getUserAccounts(username))
+        accounts = Array(ApplicationService.getUserAccounts(username))
         print(accounts)
         
         accountsTableView.delegate = self

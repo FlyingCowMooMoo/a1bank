@@ -9,8 +9,7 @@
 import Foundation
 
 class UserRepository {
-    var users = Set<User>()
-
+    private var users = Set<User>()
 
     init() {
     }
