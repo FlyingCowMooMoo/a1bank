@@ -32,6 +32,7 @@
 		DE745D761C9FC67C00D55A8B /* a1bankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D751C9FC67C00D55A8B /* a1bankUITests.swift */; };
 		DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D831C9FC6B200D55A8B /* UserRepository.swift */; };
 		DEB9A6481CB74C6F007A0940 /* BankAccountTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB9A6471CB74C6F007A0940 /* BankAccountTableCell.xib */; };
+		DEB9A64A1CB74E6F007A0940 /* BankAccountListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9A6491CB74E6F007A0940 /* BankAccountListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		DE745D771C9FC67C00D55A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE745D831C9FC6B200D55A8B /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		DEB9A6471CB74C6F007A0940 /* BankAccountTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankAccountTableCell.xib; sourceTree = "<group>"; };
+		DEB9A6491CB74E6F007A0940 /* BankAccountListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				DE67C4601CA90C7900A7151C /* BankAccountViewController.swift */,
 				DE67C4621CA922DD00A7151C /* HomeController.swift */,
 				DEB9A6471CB74C6F007A0940 /* BankAccountTableCell.xib */,
+				DEB9A6491CB74E6F007A0940 /* BankAccountListViewCell.swift */,
 			);
 			path = a1bank;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */,
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
+				DEB9A64A1CB74E6F007A0940 /* BankAccountListViewCell.swift in Sources */,
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
 				DE67C4611CA90C7900A7151C /* BankAccountViewController.swift in Sources */,
