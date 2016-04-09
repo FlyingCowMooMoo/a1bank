@@ -72,9 +72,10 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let acc:BankAccount = self.accounts[indexPath.row] as! BankAccount
         let controller = storyboard?.instantiateViewControllerWithIdentifier("bankAccountViewController") as!BankAccountViewController
-        controller.accountIdLabelValue.text = String(acc.id)
-        controller.accountNameLabelValue.text = acc.friendlyName
-        controller.balanceLabelValue.text = "$" + String(acc.balance)
+        controller.account = acc
+        //controller.accountIdLabelValue.text = String(acc.id)
+        //controller.accountNameLabelValue.text = acc.friendlyName
+        //controller.balanceLabelValue.text = "$" + String(acc.balance)
         presentViewController(controller, animated: true, completion: nil)
     }
 
