@@ -12,7 +12,6 @@ class AccountTableViewCell: UITableViewCell {
 
     @IBOutlet var accountNameLabel: UILabel!
     @IBOutlet var accountBalanceLabel: UILabel!
-    @IBOutlet var accountDetailsButton: UIButton!
     @IBOutlet var accountLabel: UILabel!
     @IBOutlet var balanceLabel: UILabel!
     override func awakeFromNib() {

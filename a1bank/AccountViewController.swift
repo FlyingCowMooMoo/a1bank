@@ -63,6 +63,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let acc:BankAccount = self.accounts[indexPath.row] as! BankAccount
+        let accid = acc.id
         performSegueWithIdentifier("WebSegue", sender: indexPath)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

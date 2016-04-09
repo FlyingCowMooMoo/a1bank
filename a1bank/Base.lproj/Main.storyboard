@@ -150,7 +150,7 @@
         <!--Bank Account View Controller-->
         <scene sceneID="4br-JB-fuP">
             <objects>
-                <viewController id="oTa-5I-tXJ" customClass="BankAccountViewController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bankAccountViewController" id="oTa-5I-tXJ" customClass="BankAccountViewController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dPr-7h-uN6"/>
                         <viewControllerLayoutGuide type="bottom" id="jRJ-Ux-DsS"/>
@@ -265,7 +265,7 @@
         <!--Home Controller-->
         <scene sceneID="5tq-hz-rel">
             <objects>
-                <viewController id="UIA-HV-PNu" customClass="HomeController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="UIA-HV-PNu" customClass="HomeController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JZ0-jr-dkL"/>
                         <viewControllerLayoutGuide type="bottom" id="XQS-V4-SQw"/>
@@ -331,10 +331,10 @@
             </objects>
             <point key="canvasLocation" x="-898" y="-220"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="C6f-7A-LeH">
             <objects>
-                <viewController id="PoV-oG-DUI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutViewController" id="PoV-oG-DUI" customClass="AboutViewController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1i6-jC-Ynq"/>
                         <viewControllerLayoutGuide type="bottom" id="plB-ob-cTr"/>
@@ -472,27 +472,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accountholdername" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kD-of-9AU">
-                                <rect key="frame" x="185" y="66" width="236" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="ew1-nh-3UO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-D0-AwN">
-                                <rect key="frame" x="185" y="113" width="236" height="467"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="DC4-bJ-Gux" id="xoc-GI-F2v"/>
-                                    <outlet property="delegate" destination="DC4-bJ-Gux" id="Iaz-nB-dxE"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
                                 <rect key="frame" x="179" y="28" width="242" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="242" id="bvI-wW-eRh"/>
+                                    <constraint firstAttribute="width" constant="242" id="2xt-M1-HpN"/>
                                 </constraints>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -501,17 +484,34 @@
                                     <action selector="logoutPressed:" destination="DC4-bJ-Gux" eventType="touchDown" id="fu2-gE-Xub"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accountholdername" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kD-of-9AU">
+                                <rect key="frame" x="185" y="66" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="9wM-vm-QJv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-D0-AwN">
+                                <rect key="frame" x="20" y="113" width="560" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DC4-bJ-Gux" id="xoc-GI-F2v"/>
+                                    <outlet property="delegate" destination="DC4-bJ-Gux" id="Iaz-nB-dxE"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1kD-of-9AU" firstAttribute="trailing" secondItem="YrL-ac-wUo" secondAttribute="trailing" id="2Lb-FK-RXi"/>
-                            <constraint firstItem="YrL-ac-wUo" firstAttribute="centerX" secondItem="q0q-xu-uY2" secondAttribute="centerX" id="9hO-CK-caM"/>
-                            <constraint firstItem="aLT-D0-AwN" firstAttribute="leading" secondItem="1kD-of-9AU" secondAttribute="leading" id="HwL-I3-izl"/>
-                            <constraint firstItem="aLT-D0-AwN" firstAttribute="trailing" secondItem="1kD-of-9AU" secondAttribute="trailing" id="PGT-rq-08X"/>
-                            <constraint firstItem="aLT-D0-AwN" firstAttribute="top" secondItem="1kD-of-9AU" secondAttribute="bottom" constant="26" id="cWb-PB-lo6"/>
-                            <constraint firstItem="YrL-ac-wUo" firstAttribute="top" secondItem="2QB-w0-8bO" secondAttribute="bottom" constant="8" symbolic="YES" id="cpX-ao-Obq"/>
-                            <constraint firstItem="1kD-of-9AU" firstAttribute="top" secondItem="YrL-ac-wUo" secondAttribute="bottom" constant="8" symbolic="YES" id="nB1-x5-eRa"/>
-                            <constraint firstAttribute="bottom" secondItem="aLT-D0-AwN" secondAttribute="bottom" constant="20" symbolic="YES" id="wzY-Us-RcR"/>
+                            <constraint firstItem="YrL-ac-wUo" firstAttribute="top" secondItem="2QB-w0-8bO" secondAttribute="bottom" constant="8" symbolic="YES" id="13k-rg-FW4"/>
+                            <constraint firstItem="1kD-of-9AU" firstAttribute="top" secondItem="YrL-ac-wUo" secondAttribute="bottom" constant="8" symbolic="YES" id="4Q9-hF-nmF"/>
+                            <constraint firstItem="YrL-ac-wUo" firstAttribute="centerX" secondItem="aLT-D0-AwN" secondAttribute="centerX" id="5L9-H9-FB6"/>
+                            <constraint firstItem="aLT-D0-AwN" firstAttribute="top" secondItem="1kD-of-9AU" secondAttribute="bottom" constant="26" id="7SC-oS-U2I"/>
+                            <constraint firstAttribute="bottom" secondItem="aLT-D0-AwN" secondAttribute="bottom" constant="20" symbolic="YES" id="ArW-b3-z4M"/>
+                            <constraint firstItem="YrL-ac-wUo" firstAttribute="trailing" secondItem="1kD-of-9AU" secondAttribute="trailing" id="Hbk-4f-6ob"/>
+                            <constraint firstItem="aLT-D0-AwN" firstAttribute="leading" secondItem="q0q-xu-uY2" secondAttribute="leadingMargin" id="NAE-qW-xuk"/>
+                            <constraint firstItem="aLT-D0-AwN" firstAttribute="trailing" secondItem="q0q-xu-uY2" secondAttribute="trailingMargin" id="u1b-ud-xz5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -522,7 +522,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6s-co-rN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="443"/>
+            <point key="canvasLocation" x="628" y="463"/>
         </scene>
     </scenes>
     <resources>

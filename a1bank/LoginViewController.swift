@@ -15,16 +15,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     private var applicationService = ApplicationService.instance
     @IBOutlet weak var errorLabel: UILabel!
-    var hasErrors:Bool = false
-    var validUsername:String!
-    var validLogin:Bool = false
     override func viewDidLoad() {
         
         self.applicationService = ApplicationService.instance
         ApplicationService.populateData()
         
         super.viewDidLoad()
-        if(self.hasErrors == false)
+        if(AppState.sharedInstance.hasLoginErrors == false)
         {
             errorLabel.hidden = true
             errorLabel.enabled = false
@@ -56,20 +53,25 @@ class LoginViewController: UIViewController {
             //let controller  = storyboard?.instantiateViewControllerWithIdentifier("accountViewController") as! //AccountViewController
             //controller.username = username
             //presentViewController(controller, animated: true, completion: nil)
-            self.validUsername = username
+            AppState.sharedInstance.isLoggedIn = true
+            AppState.sharedInstance.currentUser = username
             self.performSegueWithIdentifier("showAccountSegue", sender: username)
-            self.validLogin = true
             
         }
-        self.validLogin = false
-        errorLabel.text = "Invalid credentials, please try again!"
-        errorLabel.highlighted = true
-        errorLabel.enabled = true
+        else
+        {
+            AppState.sharedInstance.hasLoginErrors = true
+            errorLabel.text = "Invalid credentials, please try again!"
+            errorLabel.highlighted = true
+            errorLabel.enabled = true
+            
+        }
     }
     
     @IBAction func handleForgotPassword(sender: UIButton)
     {
-        //TODO: Go to contact us page
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("aboutUsViewController") as! AboutViewController
+        presentViewController(controller, animated: true, completion: nil)
     }
     
     func dismissKeyboard()
@@ -79,7 +81,7 @@ class LoginViewController: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool
     {
-        return self.validLogin
+        return AppState.sharedInstance.isLoggedIn
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
@@ -87,9 +89,7 @@ class LoginViewController: UIViewController {
         if (segue.identifier == "showAccountSegue")
         {
             let destinationViewController = segue.destinationViewController as! AccountViewController
-            //let value = sender as! String
-            let value = self.validUsername
-            destinationViewController.username = value
+            destinationViewController.username = AppState.sharedInstance.currentUser
         }
     }
   
