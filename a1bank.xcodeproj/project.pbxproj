@@ -19,6 +19,7 @@
 		DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */; };
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
 		DE5CF1491CB8DEA900373128 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1481CB8DEA900373128 /* AboutViewController.swift */; };
+		DE5CF14B1CB8E48000373128 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF14A1CB8E48000373128 /* README.md */; };
 		DE67C4591CA8F15800A7151C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE67C4581CA8F15800A7151C /* logo.png */; };
 		DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */; };
 		DE67C45F1CA9087800A7151C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45E1CA9087800A7151C /* AccountViewController.swift */; };
@@ -60,6 +61,7 @@
 		DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = ../AccountTableViewCell.swift; sourceTree = "<group>"; };
 		DE5CF1441CB8D3E900373128 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		DE5CF1481CB8DEA900373128 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		DE5CF14A1CB8E48000373128 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE67C4581CA8F15800A7151C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE67C45E1CA9087800A7151C /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		DE745D491C9FC67C00D55A8B = {
 			isa = PBXGroup;
 			children = (
+				DE5CF14A1CB8E48000373128 /* README.md */,
 				DE745D541C9FC67C00D55A8B /* a1bank */,
 				DE745D691C9FC67C00D55A8B /* a1bankTests */,
 				DE745D741C9FC67C00D55A8B /* a1bankUITests */,
@@ -316,6 +319,7 @@
 				DE67C45F1CA9087800A7151C /* AccountViewController.swift in Sources */,
 				DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */,
 				DE67C4631CA922DD00A7151C /* HomeController.swift in Sources */,
+				DE5CF14B1CB8E48000373128 /* README.md in Sources */,
 				1D1047CC60ACE12D99FEC553 /* BankAccountRepository.swift in Sources */,
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
 			);
