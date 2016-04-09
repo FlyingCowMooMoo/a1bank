@@ -11,4 +11,9 @@ import UIKit
 class AboutViewController: UIViewController
 {
 
+    @IBAction func goBackHome(sender: UIButton)
+    {
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("homeViewController") as!HomeController
+        presentViewController(controller, animated: true, completion: nil)
+    }
 }

@@ -15,13 +15,26 @@ class BankAccountViewController: UIViewController {
     @IBOutlet weak var balanceLabelValue: UILabel!
     
     
+    var account:BankAccount!
+    
     
     @IBAction func backButtonPressed(sender: UIButton)
     {
-        //TODO: Go back
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("accountViewController") as!AccountViewController
+        controller.username = AppState.sharedInstance.currentUser
+        presentViewController(controller, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(account == nil)
+        {
+            let alert = UIAlertController(title: "Error", message: "An error occured while loading the details of this account, please try again later", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        self.accountNameLabelValue.text = String(self.account.friendlyName)
+        self.accountIdLabelValue.text = String(self.account.id)
+        self.balanceLabelValue.text = "$" + String(account.balance)
     }
 
     override func didReceiveMemoryWarning() {

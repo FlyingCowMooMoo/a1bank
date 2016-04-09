@@ -19,22 +19,24 @@ class ApplicationService {
     
     static func populateData()
     {
+        let numberOfUsers = Int(arc4random_uniform(20) + 10)
         //populate dummy data
-        for var i = 0; i < 20; ++i
+        for var i = 0; i < numberOfUsers; ++i
         {
             if (instance.userRepository.createUser("user\(i)", password: "password")) {
                 
                 let account = instance.userRepository.getUser("user\(i)")
                 if (account != nil) {
-                    let numberOfAccounts = Int(arc4random_uniform(UInt32(5)))
+                    let numberOfAccounts = Int(arc4random_uniform(20) + 10)
                     for var j = 0; j < numberOfAccounts; ++j {
-                        instance.bankAccountRepository.createAccount(Double(numberOfAccounts) * 1.3, ownerId: account!.id,
+                        instance.bankAccountRepository.createAccount(Double(numberOfAccounts) + 1.5 * Double(numberOfUsers), ownerId:account!.id,
                             friendlyName: "Personal Savings\(j)")
                     }
                 }
             }
         }
     }
+    
 
     static func authenticateUser(userName: String, password: String) -> Bool {
         let user = instance.userRepository.getUser(userName)

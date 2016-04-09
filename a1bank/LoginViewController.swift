@@ -50,9 +50,6 @@ class LoginViewController: UIViewController {
         let result = ApplicationService.authenticateUser(username, password: password as String)
         if(result)
         {
-            //let controller  = storyboard?.instantiateViewControllerWithIdentifier("accountViewController") as! //AccountViewController
-            //controller.username = username
-            //presentViewController(controller, animated: true, completion: nil)
             AppState.sharedInstance.isLoggedIn = true
             AppState.sharedInstance.currentUser = username
             self.performSegueWithIdentifier("showAccountSegue", sender: username)
@@ -63,6 +60,7 @@ class LoginViewController: UIViewController {
             AppState.sharedInstance.hasLoginErrors = true
             errorLabel.text = "Invalid credentials, please try again!"
             errorLabel.highlighted = true
+            errorLabel.hidden = false
             errorLabel.enabled = true
             
         }
@@ -81,7 +79,11 @@ class LoginViewController: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool
     {
-        return AppState.sharedInstance.isLoggedIn
+        if(identifier == "showAccountSegue")
+        {
+            return AppState.sharedInstance.isLoggedIn
+        }
+        return true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)

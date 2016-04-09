@@ -39,7 +39,11 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBAction func logoutPressed(sender: UIButton)
     {
-        //TODO:Handle User Logout
+        AppState.sharedInstance.isLoggedIn = false
+        AppState.sharedInstance.hasLoginErrors = false
+        AppState.sharedInstance.currentUser = nil
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("homeViewController") as!HomeController
+        presentViewController(controller, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,7 +53,10 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let n = self.accounts.count ?? 0
-        print("we have the following number of accounts " + String(n))
+        if(n == 0)
+        {
+            print("Oops no accounts found")
+        }
         return n
     }
     
@@ -64,9 +71,11 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let acc:BankAccount = self.accounts[indexPath.row] as! BankAccount
-        let accid = acc.id
-        performSegueWithIdentifier("WebSegue", sender: indexPath)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("bankAccountViewController") as!BankAccountViewController
+        controller.accountIdLabelValue.text = String(acc.id)
+        controller.accountNameLabelValue.text = acc.friendlyName
+        controller.balanceLabelValue.text = "$" + String(acc.balance)
+        presentViewController(controller, animated: true, completion: nil)
     }
 
 }
