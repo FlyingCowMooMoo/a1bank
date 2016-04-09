@@ -290,22 +290,27 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCi-BB-456">
                                 <rect key="frame" x="217" y="28" width="166" height="206"/>
+                                <accessibility key="accessibilityConfiguration" hint="This is the logo, if you are blind you probably dont care about this, it's shapped like an old greek thingy and it's blue" identifier="homelogo" label="Logo">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="154-oT-exh"/>
                                     <constraint firstAttribute="width" secondItem="CCi-BB-456" secondAttribute="height" multiplier="83:103" id="caj-qe-g9J"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Copyright of the Fraud Bank" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4k9-ab-Bjl">
-                                <rect key="frame" x="180" y="550" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Fkb-sb-yrh"/>
-                                </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHm-81-MjC">
+                                <rect key="frame" x="180" y="359" width="240" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="contactus button" identifier="contactUs" label="ContactUs"/>
+                                <state key="normal" title="Contact Us">
+                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactUsPressed:" destination="UIA-HV-PNu" eventType="touchUpInside" id="qc0-TM-oqA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg7-hK-fIG">
                                 <rect key="frame" x="180" y="285" width="240" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="This is the login button" identifier="loginButton" label="login button"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="rqa-LF-5sa"/>
                                 </constraints>
@@ -316,15 +321,16 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goto_login" id="y3D-fq-VX6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHm-81-MjC">
-                                <rect key="frame" x="180" y="359" width="240" height="30"/>
-                                <state key="normal" title="Contact Us">
-                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="contactUsPressed:" destination="UIA-HV-PNu" eventType="touchUpInside" id="qc0-TM-oqA"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Copyright of the Fraud Bank" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4k9-ab-Bjl">
+                                <rect key="frame" x="180" y="550" width="240" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="copyrighthome"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fkb-sb-yrh"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
