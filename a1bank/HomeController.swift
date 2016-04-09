@@ -11,6 +11,7 @@ import UIKit
 class HomeController: UIViewController {
 
     @IBOutlet var contactUsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

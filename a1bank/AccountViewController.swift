@@ -32,6 +32,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
         accountHolderNameValue.text = username
+        
+        self.tableView.rowHeight = 64.0
 
         
     }
