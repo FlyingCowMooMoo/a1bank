@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     var hasErrors:Bool = false
     var validUsername:String!
+    var validLogin:Bool = false
     override func viewDidLoad() {
         
         self.applicationService = ApplicationService.instance
@@ -57,8 +58,10 @@ class LoginViewController: UIViewController {
             //presentViewController(controller, animated: true, completion: nil)
             self.validUsername = username
             self.performSegueWithIdentifier("showAccountSegue", sender: username)
+            self.validLogin = true
             
         }
+        self.validLogin = false
         errorLabel.text = "Invalid credentials, please try again!"
         errorLabel.highlighted = true
         errorLabel.enabled = true
@@ -74,12 +77,18 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool
+    {
+        return self.validLogin
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
         if (segue.identifier == "showAccountSegue")
         {
             let destinationViewController = segue.destinationViewController as! AccountViewController
-            let value = sender as! String
+            //let value = sender as! String
+            let value = self.validUsername
             destinationViewController.username = value
         }
     }

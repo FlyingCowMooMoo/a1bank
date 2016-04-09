@@ -13,7 +13,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     private var applicationService = ApplicationService.instance
 
     
-    @IBOutlet weak var accountsTableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var accountHolderNameValue: UILabel!
     var accounts = []
@@ -25,10 +25,14 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         accounts = Array(ApplicationService.getUserAccounts(username))
         print(accounts)
         
-        accountsTableView.delegate = self
-        accountsTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        //register custom cell from nib
+        var nib = UINib(nibName: "accountViewTableCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "cell")
+        
+        accountHolderNameValue.text = username
+
         
     }
 
@@ -44,14 +48,16 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.accounts.count)
-        return self.accounts.count ?? 0
+        let n = self.accounts.count ?? 0
+        print("we have the following number of accounts " + String(n))
+        return n
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.registerNib(UINib(nibName: "BankAccountListViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
-        var cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! BankAccountTableCell
-        cell.account = self.accounts[indexPath.row] as! BankAccount
+        var cell:AccountTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! AccountTableViewCell
+        let account = self.accounts[indexPath.row] as! BankAccount
+        cell.accountNameLabel.text = account.friendlyName
+        cell.accountBalanceLabel.text = "$" + String(account.balance)
         return cell
     }
     

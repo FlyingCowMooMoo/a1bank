@@ -17,8 +17,8 @@ class BankAccountTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.accountNameValue.text = self.account.friendlyName
-        self.accountBalanceValue.text = String(self.account.balance)
+        //self.accountNameValue.text = self.account.friendlyName
+        //self.accountBalanceValue.text = String(self.account.balance)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
