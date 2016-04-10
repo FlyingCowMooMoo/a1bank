@@ -13,7 +13,6 @@ class a1bankUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        continueAfterFailure = false
         XCUIApplication().launch()
     }
     
@@ -72,6 +71,8 @@ class a1bankUITests: XCTestCase {
     
     func testAccountPageHasTableView()
     {
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        
         let app = XCUIApplication()
         app.buttons["loginButton"].tap()
         
@@ -79,20 +80,39 @@ class a1bankUITests: XCTestCase {
         usernameTextField.tap()
         usernameTextField.typeText("user1")
         
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        XCUIDevice.sharedDevice().orientation = .Portrait
+        //tap somewhere outside the textfield
         let element = app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element
         element.tap()
-        element.tap()
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
         passwordSecureTextField.tap()
         passwordSecureTextField.typeText("password")
+        
+        element.tap()
         app.buttons["Login"].tap()
-        XCTAssertTrue(app.tables.element.cells.elementBoundByIndex(2).exists)
+        XCTAssertTrue(app.tables.element.exists)
     }
     
-    func testExample() {
+    func testAboutUsPageHasPhoneNumber()
+    {
+        XCUIDevice.sharedDevice().orientation = .Portrait
         
+        let app = XCUIApplication()
         
+        app.buttons["contactUs"].tap()
+        
+        XCTAssertTrue(app.staticTexts["Ph:+61000000000"].exists)
+    }
+    
+    func testAboutIsPageHasTitle()
+    {
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        
+        let app = XCUIApplication()
+        
+        app.buttons["contactUs"].tap()
+        
+        app.staticTexts["Fraud Bank Non-Profit Bank"]
     }
     
 }
