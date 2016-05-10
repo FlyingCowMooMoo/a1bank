@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UIA-HV-PNu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UIA-HV-PNu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -146,6 +146,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129" y="-220"/>
+        </scene>
+        <!--Locate Us View Controller-->
+        <scene sceneID="F7D-3K-oKK">
+            <objects>
+                <viewController id="leU-gZ-FWx" customClass="LocateUsViewController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZkK-xi-Vqt"/>
+                        <viewControllerLayoutGuide type="bottom" id="s3Q-lA-KOU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XxS-li-sRt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="onG-94-uD9">
+                                <rect key="frame" x="20" y="66" width="560" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="ip8-S1-YRQ"/>
+                                </constraints>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-Vs-3ab">
+                                <rect key="frame" x="20" y="304" width="560" height="276"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDz-Wf-Ai4">
+                                <rect key="frame" x="236" y="13" width="560" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="onG-94-uD9" firstAttribute="leading" secondItem="7aC-Vs-3ab" secondAttribute="leading" id="1x3-i2-os5"/>
+                            <constraint firstItem="eDz-Wf-Ai4" firstAttribute="trailing" secondItem="XxS-li-sRt" secondAttribute="trailingMargin" id="2fb-CW-DqE"/>
+                            <constraint firstItem="eDz-Wf-Ai4" firstAttribute="leading" secondItem="XxS-li-sRt" secondAttribute="leadingMargin" id="5U1-fN-sPI"/>
+                            <constraint firstItem="eDz-Wf-Ai4" firstAttribute="top" secondItem="ZkK-xi-Vqt" secondAttribute="bottom" constant="8" symbolic="YES" id="Bdu-xf-kvk"/>
+                            <constraint firstItem="eDz-Wf-Ai4" firstAttribute="trailing" secondItem="onG-94-uD9" secondAttribute="trailing" id="F0z-Th-9ar"/>
+                            <constraint firstItem="onG-94-uD9" firstAttribute="trailing" secondItem="7aC-Vs-3ab" secondAttribute="trailing" id="QDx-TO-z6N"/>
+                            <constraint firstItem="s3Q-lA-KOU" firstAttribute="top" secondItem="7aC-Vs-3ab" secondAttribute="bottom" constant="20" id="aC4-fw-SQs"/>
+                            <constraint firstItem="eDz-Wf-Ai4" firstAttribute="leading" secondItem="onG-94-uD9" secondAttribute="leading" id="clf-yB-ShB"/>
+                            <constraint firstItem="onG-94-uD9" firstAttribute="top" secondItem="eDz-Wf-Ai4" secondAttribute="bottom" constant="8" symbolic="YES" id="eoV-u4-hnl"/>
+                            <constraint firstItem="7aC-Vs-3ab" firstAttribute="top" secondItem="onG-94-uD9" secondAttribute="bottom" constant="8" symbolic="YES" id="hwF-69-HN3"/>
+                            <constraint firstAttribute="bottom" secondItem="7aC-Vs-3ab" secondAttribute="bottom" constant="20" symbolic="YES" id="rLc-Rh-zzp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="onG-94-uD9" id="SMO-Vf-GFv"/>
+                        <outlet property="tableView" destination="7aC-Vs-3ab" id="nah-sA-PIS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8j-m4-th8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="-293"/>
         </scene>
         <!--Bank Account View Controller-->
         <scene sceneID="4br-JB-fuP">

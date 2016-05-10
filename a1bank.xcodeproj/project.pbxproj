@@ -55,6 +55,9 @@
 		DE745D6B1C9FC67C00D55A8B /* a1bankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D6A1C9FC67C00D55A8B /* a1bankTests.swift */; };
 		DE745D761C9FC67C00D55A8B /* a1bankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D751C9FC67C00D55A8B /* a1bankUITests.swift */; };
 		DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D831C9FC6B200D55A8B /* UserRepository.swift */; };
+		DEB137041CE1C17700E1F17A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB137031CE1C17600E1F17A /* MapKit.framework */; };
+		DEB137061CE1C9F000E1F17A /* LocateUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */; };
+		DEB137081CE1CB8C00E1F17A /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137071CE1CB8C00E1F17A /* BranchInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		DE745D751C9FC67C00D55A8B /* a1bankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a1bankUITests.swift; sourceTree = "<group>"; };
 		DE745D771C9FC67C00D55A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE745D831C9FC6B200D55A8B /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		DEB137031CE1C17600E1F17A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocateUsViewController.swift; sourceTree = "<group>"; };
+		DEB137071CE1CB8C00E1F17A /* BranchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB137041CE1C17700E1F17A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +140,7 @@
 		DE745D491C9FC67C00D55A8B = {
 			isa = PBXGroup;
 			children = (
+				DEB137031CE1C17600E1F17A /* MapKit.framework */,
 				DE5CF14A1CB8E48000373128 /* README.md */,
 				DE745D541C9FC67C00D55A8B /* a1bank */,
 				DE745D691C9FC67C00D55A8B /* a1bankTests */,
@@ -174,6 +182,8 @@
 				DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */,
 				DE5CF1441CB8D3E900373128 /* AppState.swift */,
 				DE5CF1481CB8DEA900373128 /* AboutViewController.swift */,
+				DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */,
+				DEB137071CE1CB8C00E1F17A /* BranchInfo.swift */,
 			);
 			path = a1bank;
 			sourceTree = "<group>";
@@ -264,6 +274,11 @@
 				TargetAttributes = {
 					DE745D511C9FC67C00D55A8B = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DE745D651C9FC67C00D55A8B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -332,9 +347,11 @@
 				DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */,
 				DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */,
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
+				DEB137081CE1CB8C00E1F17A /* BranchInfo.swift in Sources */,
 				DE5CF1491CB8DEA900373128 /* AboutViewController.swift in Sources */,
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
+				DEB137061CE1C9F000E1F17A /* LocateUsViewController.swift in Sources */,
 				DE67C4611CA90C7900A7151C /* BankAccountViewController.swift in Sources */,
 				1D104A6CF02BDFC4F6C1F9D6 /* User.swift in Sources */,
 				1D104AC336AACBF41D63A564 /* BankAccount.swift in Sources */,
