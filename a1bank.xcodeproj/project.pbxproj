@@ -10,8 +10,6 @@
 		1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */; };
 		1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
 		1D1047CC60ACE12D99FEC553 /* BankAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */; };
-		1D104A6CF02BDFC4F6C1F9D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1044B76A2DD67912406395 /* User.swift */; };
-		1D104AC336AACBF41D63A564 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104197DB41E9619F315D37 /* BankAccount.swift */; };
 		1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */; };
 		1D104CACD1C5E5A8FD922A2F /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
 		1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
@@ -20,12 +18,8 @@
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
 		DE5CF1491CB8DEA900373128 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1481CB8DEA900373128 /* AboutViewController.swift */; };
 		DE5CF14B1CB8E48000373128 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF14A1CB8E48000373128 /* README.md */; };
-		DE5CF14C1CB9124F00373128 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104197DB41E9619F315D37 /* BankAccount.swift */; };
-		DE5CF14D1CB9125000373128 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104197DB41E9619F315D37 /* BankAccount.swift */; };
 		DE5CF14E1CB9126200373128 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D831C9FC6B200D55A8B /* UserRepository.swift */; };
 		DE5CF14F1CB9126200373128 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D831C9FC6B200D55A8B /* UserRepository.swift */; };
-		DE5CF1501CB9127100373128 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1044B76A2DD67912406395 /* User.swift */; };
-		DE5CF1511CB9127200373128 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1044B76A2DD67912406395 /* User.swift */; };
 		DE5CF1521CB9127900373128 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45E1CA9087800A7151C /* AccountViewController.swift */; };
 		DE5CF1531CB9127900373128 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C45E1CA9087800A7151C /* AccountViewController.swift */; };
 		DE5CF1541CB9127C00373128 /* BankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67C4601CA90C7900A7151C /* BankAccountViewController.swift */; };
@@ -57,7 +51,14 @@
 		DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE745D831C9FC6B200D55A8B /* UserRepository.swift */; };
 		DEB137041CE1C17700E1F17A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB137031CE1C17600E1F17A /* MapKit.framework */; };
 		DEB137061CE1C9F000E1F17A /* LocateUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */; };
-		DEB137081CE1CB8C00E1F17A /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137071CE1CB8C00E1F17A /* BranchInfo.swift */; };
+		DEB1370B1CE1EB7600E1F17A /* BankModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB137091CE1EB7600E1F17A /* BankModel.xcdatamodeld */; };
+		DEB1370D1CE1EBAA00E1F17A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370C1CE1EBAA00E1F17A /* DataController.swift */; };
+		DEB137141CE1FBA000E1F17A /* BankAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370E1CE1FBA000E1F17A /* BankAccount+CoreDataProperties.swift */; };
+		DEB137151CE1FBA000E1F17A /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */; };
+		DEB137161CE1FBA000E1F17A /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137101CE1FBA000E1F17A /* User+CoreDataProperties.swift */; };
+		DEB137171CE1FBA000E1F17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137111CE1FBA000E1F17A /* User.swift */; };
+		DEB137181CE1FBA000E1F17A /* BranchInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137121CE1FBA000E1F17A /* BranchInfo+CoreDataProperties.swift */; };
+		DEB137191CE1FBA000E1F17A /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137131CE1FBA000E1F17A /* BranchInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +79,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D104197DB41E9619F315D37 /* BankAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
-		1D1044B76A2DD67912406395 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountRepository.swift; sourceTree = "<group>"; };
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = accountViewTableCell.xib; sourceTree = "<group>"; };
@@ -108,7 +107,14 @@
 		DE745D831C9FC6B200D55A8B /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		DEB137031CE1C17600E1F17A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocateUsViewController.swift; sourceTree = "<group>"; };
-		DEB137071CE1CB8C00E1F17A /* BranchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInfo.swift; sourceTree = "<group>"; };
+		DEB1370A1CE1EB7600E1F17A /* BankModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BankModel.xcdatamodel; sourceTree = "<group>"; };
+		DEB1370C1CE1EBAA00E1F17A /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = ../DataController.swift; sourceTree = "<group>"; };
+		DEB1370E1CE1FBA000E1F17A /* BankAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BankAccount+CoreDataProperties.swift"; path = "../BankAccount+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankAccount.swift; path = ../BankAccount.swift; sourceTree = "<group>"; };
+		DEB137101CE1FBA000E1F17A /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DEB137111CE1FBA000E1F17A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		DEB137121CE1FBA000E1F17A /* BranchInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BranchInfo+CoreDataProperties.swift"; path = "../BranchInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DEB137131CE1FBA000E1F17A /* BranchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BranchInfo.swift; path = ../BranchInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,14 @@
 		DE745D541C9FC67C00D55A8B /* a1bank */ = {
 			isa = PBXGroup;
 			children = (
+				DEB1370E1CE1FBA000E1F17A /* BankAccount+CoreDataProperties.swift */,
+				DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */,
+				DEB137101CE1FBA000E1F17A /* User+CoreDataProperties.swift */,
+				DEB137111CE1FBA000E1F17A /* User.swift */,
+				DEB137121CE1FBA000E1F17A /* BranchInfo+CoreDataProperties.swift */,
+				DEB137131CE1FBA000E1F17A /* BranchInfo.swift */,
+				DEB1370C1CE1EBAA00E1F17A /* DataController.swift */,
+				DEB137091CE1EB7600E1F17A /* BankModel.xcdatamodeld */,
 				DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */,
 				DE745D551C9FC67C00D55A8B /* AppDelegate.swift */,
 				DE745D571C9FC67C00D55A8B /* ViewController.swift */,
@@ -171,8 +185,6 @@
 				DE745D5E1C9FC67C00D55A8B /* LaunchScreen.storyboard */,
 				DE745D611C9FC67C00D55A8B /* Info.plist */,
 				DE745D831C9FC6B200D55A8B /* UserRepository.swift */,
-				1D1044B76A2DD67912406395 /* User.swift */,
-				1D104197DB41E9619F315D37 /* BankAccount.swift */,
 				1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */,
 				1D104EE93767DE801F84DC8C /* ApplicationService.swift */,
 				DE67C45C1CA8FA0400A7151C /* LoginViewController.swift */,
@@ -183,7 +195,6 @@
 				DE5CF1441CB8D3E900373128 /* AppState.swift */,
 				DE5CF1481CB8DEA900373128 /* AboutViewController.swift */,
 				DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */,
-				DEB137071CE1CB8C00E1F17A /* BranchInfo.swift */,
 			);
 			path = a1bank;
 			sourceTree = "<group>";
@@ -347,20 +358,25 @@
 				DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */,
 				DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */,
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
-				DEB137081CE1CB8C00E1F17A /* BranchInfo.swift in Sources */,
+				DEB137181CE1FBA000E1F17A /* BranchInfo+CoreDataProperties.swift in Sources */,
 				DE5CF1491CB8DEA900373128 /* AboutViewController.swift in Sources */,
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
+				DEB137141CE1FBA000E1F17A /* BankAccount+CoreDataProperties.swift in Sources */,
 				DEB137061CE1C9F000E1F17A /* LocateUsViewController.swift in Sources */,
 				DE67C4611CA90C7900A7151C /* BankAccountViewController.swift in Sources */,
-				1D104A6CF02BDFC4F6C1F9D6 /* User.swift in Sources */,
-				1D104AC336AACBF41D63A564 /* BankAccount.swift in Sources */,
+				DEB1370D1CE1EBAA00E1F17A /* DataController.swift in Sources */,
 				DE67C45F1CA9087800A7151C /* AccountViewController.swift in Sources */,
 				DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */,
 				DE67C4631CA922DD00A7151C /* HomeController.swift in Sources */,
 				DE5CF14B1CB8E48000373128 /* README.md in Sources */,
+				DEB1370B1CE1EB7600E1F17A /* BankModel.xcdatamodeld in Sources */,
+				DEB137161CE1FBA000E1F17A /* User+CoreDataProperties.swift in Sources */,
+				DEB137191CE1FBA000E1F17A /* BranchInfo.swift in Sources */,
 				1D1047CC60ACE12D99FEC553 /* BankAccountRepository.swift in Sources */,
+				DEB137151CE1FBA000E1F17A /* BankAccount.swift in Sources */,
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
+				DEB137171CE1FBA000E1F17A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,11 +387,9 @@
 				DE745D6B1C9FC67C00D55A8B /* a1bankTests.swift in Sources */,
 				DE5CF1581CB9128300373128 /* AppState.swift in Sources */,
 				DE5CF15A1CB9128600373128 /* AboutViewController.swift in Sources */,
-				DE5CF14C1CB9124F00373128 /* BankAccount.swift in Sources */,
 				DE5CF1601CB9128E00373128 /* ViewController.swift in Sources */,
 				DE5CF1541CB9127C00373128 /* BankAccountViewController.swift in Sources */,
 				DE5CF1521CB9127900373128 /* AccountViewController.swift in Sources */,
-				DE5CF1501CB9127100373128 /* User.swift in Sources */,
 				DE5CF1561CB9127E00373128 /* HomeController.swift in Sources */,
 				DE5CF15E1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */,
@@ -392,11 +406,9 @@
 				DE745D761C9FC67C00D55A8B /* a1bankUITests.swift in Sources */,
 				DE5CF1591CB9128400373128 /* AppState.swift in Sources */,
 				DE5CF15B1CB9128600373128 /* AboutViewController.swift in Sources */,
-				DE5CF14D1CB9125000373128 /* BankAccount.swift in Sources */,
 				DE5CF1611CB9128F00373128 /* ViewController.swift in Sources */,
 				DE5CF1551CB9127C00373128 /* BankAccountViewController.swift in Sources */,
 				DE5CF1531CB9127900373128 /* AccountViewController.swift in Sources */,
-				DE5CF1511CB9127200373128 /* User.swift in Sources */,
 				DE5CF1571CB9127F00373128 /* HomeController.swift in Sources */,
 				DE5CF15F1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */,
@@ -638,6 +650,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DEB137091CE1EB7600E1F17A /* BankModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DEB1370A1CE1EB7600E1F17A /* BankModel.xcdatamodel */,
+			);
+			currentVersion = DEB1370A1CE1EB7600E1F17A /* BankModel.xcdatamodel */;
+			name = BankModel.xcdatamodeld;
+			path = ../BankModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DE745D4A1C9FC67C00D55A8B /* Project object */;
 }
