@@ -46,22 +46,16 @@ class UserRepository {
         {
             print(results.count)
             let r = results[0] as! NSManagedObject
-            
-            let id = r.valueForKey("id") as! Int32
-            
-            var firstName = r.valueForKey("firstName") as! String;
-                
+            let id = r.valueForKey("id") as! Int;
+            let firstName = r.valueForKey("firstName") as! String;
             let lastName = r.valueForKey("lastName") as! String;
-            
             let userName = r.valueForKey("username") as! String;
-                
             let password = r.valueForKey("password") as! String;
-                
-            var email = r.valueForKey("email") as! String;
-                
+            let email = r.valueForKey("email") as! String
             let dateOfBirth = r.valueForKey("dateOfBirth") as! NSDate
-                
-            return User(id: id, userName: userName, password: password, firstName: firstName, lastName: lastName, email: email, dateOfBirth: dateOfBirth)
+            return User(id: Int32(id), userName: userName, password: password, firstName: firstName, lastName: lastName, email: email, dateOfBirth: dateOfBirth)
+            
+        
         }
         
         return nil

@@ -66,14 +66,14 @@ class BankAccountRepository {
         else
         {
             let r = results[0] as! NSManagedObject
-            let id = r.valueForKey("id") as! Int32
+            let id = r.valueForKey("id") as! Int
             let balance = r.valueForKey("balance") as! Double;
             let owner = r.valueForKey("owner") as! Int32;
             let friendlyName = r.valueForKey("friendlyName") as! String;
             let currency = r.valueForKey("currency") as! String;
             
             
-            return BankAccount(id: id, balance: balance, ownerId: owner, friendName: friendlyName, currency: currency)
+            return BankAccount(id: Int32(id), balance: balance, ownerId: owner, friendName: friendlyName, currency: currency)
         }
         
     }
@@ -86,7 +86,7 @@ class BankAccountRepository {
         
         let request = NSFetchRequest(entityName: "BankAccounts")
         request.returnsObjectsAsFaults = false;
-        request.predicate = NSPredicate(format: "owner = %@", userId)
+        request.predicate = NSPredicate(format: "owner = %i", userId)
         var results: NSArray
         
         do {
@@ -104,12 +104,12 @@ class BankAccountRepository {
             for res in results
             {
                 let r = res as! NSManagedObject
-                let id = r.valueForKey("id") as! Int32
+                let id = r.valueForKey("id") as! Int
                 var balance = r.valueForKey("balance") as! Double;
                 let owner = r.valueForKey("owner") as! Int32;
                 let friendlyName = r.valueForKey("friendlyName") as! String;
                 let currency = r.valueForKey("currency") as! String;
-                let b = BankAccount(id: id, balance: balance, ownerId: owner, friendName: friendlyName, currency: currency)
+                let b = BankAccount(id: Int32(id), balance: balance, ownerId: owner, friendName: friendlyName, currency: currency)
                 acc.insert(b)
             }
             
