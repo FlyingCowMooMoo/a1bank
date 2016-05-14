@@ -59,6 +59,12 @@
 		DEF5051B1CE6ED36003A584E /* dummyaccounts.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */; };
 		DEF5051D1CE6EDAC003A584E /* dummybranches in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051C1CE6EDAC003A584E /* dummybranches */; };
 		DEF505211CE6F71F003A584E /* Bank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEF5051F1CE6F71F003A584E /* Bank.xcdatamodeld */; };
+		DEF505221CE716D3003A584E /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */; };
+		DEF505231CE716D4003A584E /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */; };
+		DEF505241CE716D9003A584E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137111CE1FBA000E1F17A /* User.swift */; };
+		DEF505251CE716D9003A584E /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137131CE1FBA000E1F17A /* BranchInfo.swift */; };
+		DEF505261CE716DA003A584E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137111CE1FBA000E1F17A /* User.swift */; };
+		DEF505271CE716DA003A584E /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137131CE1FBA000E1F17A /* BranchInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -429,7 +435,10 @@
 				DE5CF15A1CB9128600373128 /* AboutViewController.swift in Sources */,
 				DE5CF1601CB9128E00373128 /* ViewController.swift in Sources */,
 				DE5CF1541CB9127C00373128 /* BankAccountViewController.swift in Sources */,
+				DEF505251CE716D9003A584E /* BranchInfo.swift in Sources */,
 				DE5CF1521CB9127900373128 /* AccountViewController.swift in Sources */,
+				DEF505241CE716D9003A584E /* User.swift in Sources */,
+				DEF505231CE716D4003A584E /* BankAccount.swift in Sources */,
 				DE5CF1561CB9127E00373128 /* HomeController.swift in Sources */,
 				DE5CF15E1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */,
@@ -448,7 +457,10 @@
 				DE5CF15B1CB9128600373128 /* AboutViewController.swift in Sources */,
 				DE5CF1611CB9128F00373128 /* ViewController.swift in Sources */,
 				DE5CF1551CB9127C00373128 /* BankAccountViewController.swift in Sources */,
+				DEF505271CE716DA003A584E /* BranchInfo.swift in Sources */,
 				DE5CF1531CB9127900373128 /* AccountViewController.swift in Sources */,
+				DEF505261CE716DA003A584E /* User.swift in Sources */,
+				DEF505221CE716D3003A584E /* BankAccount.swift in Sources */,
 				DE5CF1571CB9127F00373128 /* HomeController.swift in Sources */,
 				DE5CF15F1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */,

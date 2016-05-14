@@ -35,18 +35,19 @@ class UserRepository {
         do {
             results = try context.executeFetchRequest(request)
         } catch _ {
-            return false
+            return nil
         }
         
-        if(results.count < 0)
+        if results.count < 1
         {
             return nil
         }
         else
         {
+            print(results.count)
             let r = results[0] as! NSManagedObject
             
-            let id = r.valueForKey("id") as! Int64
+            let id = r.valueForKey("id") as! Int32
             
             var firstName = r.valueForKey("firstName") as! String;
                 
@@ -72,9 +73,9 @@ class UserRepository {
         }
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var context:NSManagedObjectContext = appDelegate.managedObjectContext
+        let context:NSManagedObjectContext = appDelegate.managedObjectContext
         
-        var u = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context)
+        let u = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context)
         
         u.setValue(NSNumber(int: id), forKey: "id")
         u.setValue(userName, forKey: "username")
