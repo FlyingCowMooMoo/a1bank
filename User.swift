@@ -9,7 +9,7 @@
 import Foundation
 
 class User: Hashable {
-    var id: CUnsignedLong
+    var id: Int32
     
     
     var firstName: String
@@ -25,7 +25,7 @@ class User: Hashable {
     var dateOfBirth: NSDate
     
     
-    init(id: CUnsignedLong, userName: String, password: String, firstName: String, lastName: String, email: String, dateOfBirth: NSDate) {
+    init(id: Int32, userName: String, password: String, firstName: String, lastName: String, email: String, dateOfBirth: NSDate) {
         self.id = id
         self.userName = userName
         self.password = password
