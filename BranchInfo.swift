@@ -7,11 +7,29 @@
 //
 
 import Foundation
-import CoreData
+
+class BranchInfo: Hashable {
+    var id: CUnsignedLong
+    
+    var address: String
+    
+    var comments: String
+    
+    
+    init(id: CUnsignedLong, address: String) {
+        self.id = id
+        self.address = address
+    }
+    
+    
+    var hashValue: Int {
+        get {
+            return self.id.hashValue
+        }
+    }
+}
 
 
-class BranchInfo: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+func ==(lhs: BranchInfo, rhs: BranchInfo) -> Bool {
+    return lhs.id == rhs.id
 }
