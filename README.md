@@ -1,11 +1,11 @@
-# iPhone Software Engineering Assignment 1 
+# iPhone Software Engineering Assignment <del>1</del> 2 
 ## RMIT Course: COSC2471 Semester 1 2016
 ## Fraud Bank, the iOS app 
 
 #### Basic useful feature list:
 
 * Users can login
-* User can manager multiple bank accounts under the same user/pass combo 
+* Users can manager multiple bank accounts under the same user/pass combo 
 * Minimal UI to keep everything lean and bold
 
 
@@ -17,6 +17,8 @@
 
 
 Not relevant anymore
+
+<del>
 ~~
 
 All models are hashable, to avoid duplicates as much as possible as they are stored in (Hash) Sets:+1:
@@ -58,4 +60,4 @@ return lhs.id == rhs.id
 });
 ```
 
-~~
+</del>
