@@ -9,7 +9,7 @@
 import Foundation
 
 class BankAccount: Hashable {
-    var id: CUnsignedLong
+    var id: Int32
     
     var balance: Double
     
@@ -18,16 +18,16 @@ class BankAccount: Hashable {
     var currency: String
     
     //The id of the user that owns this account
-    var owner: CUnsignedLong
+    var owner: Int32
     
-    init(id: CUnsignedLong, balance: Double, ownerId: CUnsignedLong, friendName: String) {
+    init(id: Int32, balance: Double, ownerId: Int32, friendName: String) {
         self.id = id
         self.balance = balance
         self.owner = ownerId
         self.friendlyName = friendName
         self.currency = "AUD"
     }
-    init(id: CUnsignedLong, balance: Double, ownerId: CUnsignedLong, friendName: String, currency: String) {
+    init(id: Int32, balance: Double, ownerId: Int32, friendName: String, currency: String) {
         self.id = id
         self.balance = balance
         self.owner = ownerId

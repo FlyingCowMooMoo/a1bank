@@ -9,14 +9,14 @@
 import Foundation
 
 class BranchInfo: Hashable {
-    var id: CUnsignedLong
+    var id: Int32
     
     var address: String
     
     var comments: String
     
     
-    init(id: CUnsignedLong, address: String) {
+    init(id: Int32, address: String) {
         self.id = id
         self.address = address
         self.comments = "We open when we feel like so"

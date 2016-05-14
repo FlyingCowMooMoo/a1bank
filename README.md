@@ -13,6 +13,11 @@
 
 * Repositories
 * Singleton Service
+* Core Data as an "ORM"<sup>(well it tries to be one)</sup>
+
+
+Not relevant anymore
+~~
 
 All models are hashable, to avoid duplicates as much as possible as they are stored in (Hash) Sets:+1:
 
@@ -52,3 +57,5 @@ return lhs.id == rhs.id
 }
 });
 ```
+
+~~
