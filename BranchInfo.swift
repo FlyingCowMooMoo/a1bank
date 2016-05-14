@@ -19,6 +19,7 @@ class BranchInfo: Hashable {
     init(id: CUnsignedLong, address: String) {
         self.id = id
         self.address = address
+        self.comments = "We open when we feel like so"
     }
     
     

@@ -20,19 +20,19 @@ class User: Hashable {
     
     var password: String
     
+    var email: String
     
-    init(id: CUnsignedLong, userName: String, password: String) {
-        self.id = id
-        self.userName = userName
-        self.password = password
-    }
+    var dateOfBirth: NSDate
     
-    init(id: CUnsignedLong, userName: String, password: String, firstName: String, lastName: String) {
+    
+    init(id: CUnsignedLong, userName: String, password: String, firstName: String, lastName: String, email: String, dateOfBirth: NSDate) {
         self.id = id
         self.userName = userName
         self.password = password
         self.firstName = firstName
         self.lastName = lastName
+        self.email = email
+        self.dateOfBirth = dateOfBirth
     }
     
     

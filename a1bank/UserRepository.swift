@@ -15,18 +15,13 @@ class UserRepository {
 
     init()
     {
-        let path = NSSearchPathForDirectoriesInDomains(
-            .DocumentDirectory, .UserDomainMask, true
-            ).first!
-        
-        let db = try Connection("\(path)/bankdb.sqlite3")
+
     }
 
 
     func getUser(userName: String) -> User?
     {
         
-
         return nil
     }
 

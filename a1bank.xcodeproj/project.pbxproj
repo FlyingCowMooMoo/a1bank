@@ -58,6 +58,7 @@
 		DEF505191CE6EBD1003A584E /* dummyusers.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF505181CE6EBD1003A584E /* dummyusers.csv */; };
 		DEF5051B1CE6ED36003A584E /* dummyaccounts.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */; };
 		DEF5051D1CE6EDAC003A584E /* dummybranches in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051C1CE6EDAC003A584E /* dummybranches */; };
+		DEF505211CE6F71F003A584E /* Bank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEF5051F1CE6F71F003A584E /* Bank.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		DEF505181CE6EBD1003A584E /* dummyusers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummyusers.csv; sourceTree = "<group>"; };
 		DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummyaccounts.csv; sourceTree = "<group>"; };
 		DEF5051C1CE6EDAC003A584E /* dummybranches */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummybranches; sourceTree = "<group>"; };
+		DEF505201CE6F71F003A584E /* Bank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bank.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		DE745D541C9FC67C00D55A8B /* a1bank */ = {
 			isa = PBXGroup;
 			children = (
+				DEF5051E1CE6F6AF003A584E /* CoreData */,
 				DEF505171CE6EBBA003A584E /* Data */,
 				DEF505141CE6D883003A584E /* DataAccess */,
 				DEF505131CE6D825003A584E /* Controller */,
@@ -244,6 +247,14 @@
 				DEF5051C1CE6EDAC003A584E /* dummybranches */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		DEF5051E1CE6F6AF003A584E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DEF5051F1CE6F71F003A584E /* Bank.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 				DEB137151CE1FBA000E1F17A /* BankAccount.swift in Sources */,
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
 				DEB137171CE1FBA000E1F17A /* User.swift in Sources */,
+				DEF505211CE6F71F003A584E /* Bank.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +690,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DEF5051F1CE6F71F003A584E /* Bank.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DEF505201CE6F71F003A584E /* Bank.xcdatamodel */,
+			);
+			currentVersion = DEF505201CE6F71F003A584E /* Bank.xcdatamodel */;
+			path = Bank.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DE745D4A1C9FC67C00D55A8B /* Project object */;
 }

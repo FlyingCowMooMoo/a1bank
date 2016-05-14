@@ -13,9 +13,9 @@ class BankAccountRepository {
     init() {
     }
 
-    func createAccount(balance: Double, ownerId: CUnsignedLong, friendlyName: String) -> Bool {
-        let b = BankAccount(id: CUnsignedLong(accounts.count + 1), balance: balance, ownerId: ownerId,
-            friendName: friendlyName)
+    func createAccount(id: CUnsignedLong, balance: Double, ownerId: CUnsignedLong, friendlyName: String, currency: String) -> Bool {
+        let b = BankAccount(id: id, balance: balance, ownerId: ownerId,
+            friendName: friendlyName, currency: currency)
         self.accounts.insert(b)
         
         print(b)
