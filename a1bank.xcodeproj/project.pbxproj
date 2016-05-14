@@ -54,6 +54,7 @@
 		DEB137151CE1FBA000E1F17A /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */; };
 		DEB137171CE1FBA000E1F17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137111CE1FBA000E1F17A /* User.swift */; };
 		DEB137191CE1FBA000E1F17A /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137131CE1FBA000E1F17A /* BranchInfo.swift */; };
+		DEF505161CE6DC90003A584E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEF505151CE6DC90003A584E /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankAccount.swift; path = ../BankAccount.swift; sourceTree = "<group>"; };
 		DEB137111CE1FBA000E1F17A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		DEB137131CE1FBA000E1F17A /* BranchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BranchInfo.swift; path = ../BranchInfo.swift; sourceTree = "<group>"; };
+		DEF505151CE6DC90003A584E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		DE745D491C9FC67C00D55A8B = {
 			isa = PBXGroup;
 			children = (
+				DEF505151CE6DC90003A584E /* Podfile */,
 				DEB137031CE1C17600E1F17A /* MapKit.framework */,
 				DE5CF14A1CB8E48000373128 /* README.md */,
 				DE745D541C9FC67C00D55A8B /* a1bank */,
@@ -335,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF505161CE6DC90003A584E /* Podfile in Resources */,
 				DE67C4591CA8F15800A7151C /* logo.png in Resources */,
 				DE745D601C9FC67C00D55A8B /* LaunchScreen.storyboard in Resources */,
 				DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */,

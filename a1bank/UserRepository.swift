@@ -19,19 +19,6 @@ class UserRepository {
 
     func getUser(userName: String) -> User?
     {
-        let userFetch = NSFetchRequest(entityName: "User)
-        let moc = DataController().managedObjectContext
-        
-        do {
-            
-            let user = try moc.executeFetchRequest(personFetch) as! [User]
-            return user
-            
-        }
-        catch
-        {
-            fatalError("Failed to fetch person: \(error)")
-        }
         
 
         return nil
@@ -41,7 +28,6 @@ class UserRepository {
         if (getUser(userName) != nil) {
             return false
         }
-        let moc = DataController().managedObjectContext
 
         self.users.insert(User(id: CUnsignedLong(users.count), userName: userName, password: password))
         return true
