@@ -55,6 +55,9 @@
 		DEB137171CE1FBA000E1F17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137111CE1FBA000E1F17A /* User.swift */; };
 		DEB137191CE1FBA000E1F17A /* BranchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137131CE1FBA000E1F17A /* BranchInfo.swift */; };
 		DEF505161CE6DC90003A584E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEF505151CE6DC90003A584E /* Podfile */; };
+		DEF505191CE6EBD1003A584E /* dummyusers.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF505181CE6EBD1003A584E /* dummyusers.csv */; };
+		DEF5051B1CE6ED36003A584E /* dummyaccounts.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */; };
+		DEF5051D1CE6EDAC003A584E /* dummybranches in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051C1CE6EDAC003A584E /* dummybranches */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		DEB137111CE1FBA000E1F17A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		DEB137131CE1FBA000E1F17A /* BranchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BranchInfo.swift; path = ../BranchInfo.swift; sourceTree = "<group>"; };
 		DEF505151CE6DC90003A584E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		DEF505181CE6EBD1003A584E /* dummyusers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummyusers.csv; sourceTree = "<group>"; };
+		DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummyaccounts.csv; sourceTree = "<group>"; };
+		DEF5051C1CE6EDAC003A584E /* dummybranches */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummybranches; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 		DE745D541C9FC67C00D55A8B /* a1bank */ = {
 			isa = PBXGroup;
 			children = (
+				DEF505171CE6EBBA003A584E /* Data */,
 				DEF505141CE6D883003A584E /* DataAccess */,
 				DEF505131CE6D825003A584E /* Controller */,
 				DEF505121CE6D81C003A584E /* Model */,
@@ -227,6 +234,16 @@
 				1D104EE93767DE801F84DC8C /* ApplicationService.swift */,
 			);
 			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		DEF505171CE6EBBA003A584E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DEF505181CE6EBD1003A584E /* dummyusers.csv */,
+				DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */,
+				DEF5051C1CE6EDAC003A584E /* dummybranches */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,10 +357,13 @@
 			files = (
 				DEF505161CE6DC90003A584E /* Podfile in Resources */,
 				DE67C4591CA8F15800A7151C /* logo.png in Resources */,
+				DEF505191CE6EBD1003A584E /* dummyusers.csv in Resources */,
 				DE745D601C9FC67C00D55A8B /* LaunchScreen.storyboard in Resources */,
 				DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */,
 				DE745D5D1C9FC67C00D55A8B /* Assets.xcassets in Resources */,
 				DE745D5B1C9FC67C00D55A8B /* Main.storyboard in Resources */,
+				DEF5051B1CE6ED36003A584E /* dummyaccounts.csv in Resources */,
+				DEF5051D1CE6EDAC003A584E /* dummybranches in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

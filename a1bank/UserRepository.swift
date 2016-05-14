@@ -13,7 +13,13 @@ import CoreData
 
 class UserRepository {
 
-    init() {
+    init()
+    {
+        let path = NSSearchPathForDirectoriesInDomains(
+            .DocumentDirectory, .UserDomainMask, true
+            ).first!
+        
+        let db = try Connection("\(path)/bankdb.sqlite3")
     }
 
 
@@ -28,8 +34,6 @@ class UserRepository {
         if (getUser(userName) != nil) {
             return false
         }
-
-        self.users.insert(User(id: CUnsignedLong(users.count), userName: userName, password: password))
         return true
     }
 
