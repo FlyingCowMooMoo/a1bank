@@ -50,7 +50,7 @@ class BankAccountRepository {
         
         let request = NSFetchRequest(entityName: "BankAccounts")
         request.returnsObjectsAsFaults = false;
-        request.predicate = NSPredicate(format: "id = %@", id)
+        request.predicate = NSPredicate(format: "id = %i", id)
         var results: NSArray
         
         do {
@@ -68,12 +68,12 @@ class BankAccountRepository {
             let r = results[0] as! NSManagedObject
             let id = r.valueForKey("id") as! Int
             let balance = r.valueForKey("balance") as! Double;
-            let owner = r.valueForKey("owner") as! Int32;
+            let owner = r.valueForKey("owner") as! Int;
             let friendlyName = r.valueForKey("friendlyName") as! String;
             let currency = r.valueForKey("currency") as! String;
             
             
-            return BankAccount(id: Int32(id), balance: balance, ownerId: owner, friendName: friendlyName, currency: currency)
+            return BankAccount(id: Int32(id), balance: balance, ownerId: Int32(owner), friendName: friendlyName, currency: currency)
         }
         
     }

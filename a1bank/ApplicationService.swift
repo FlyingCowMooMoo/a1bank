@@ -44,6 +44,11 @@ class ApplicationService {
         return false
     }
     
+    static func getAccount(id: Int32) -> BankAccount
+    {
+        return instance.bankAccountRepository.getAccount(id)!
+    }
+    
     static func getUserAccounts(userName: String) -> Set<BankAccount> {
         var accs = Set<BankAccount>()
         print("Getting account for user " + userName)

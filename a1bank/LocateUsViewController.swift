@@ -57,7 +57,6 @@ class LocateUsViewController: UIViewController, UITableViewDataSource, UITableVi
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.data.count)
         return self.data.count
     }
     
@@ -67,7 +66,6 @@ class LocateUsViewController: UIViewController, UITableViewDataSource, UITableVi
         b = data[indexPath.row] as! BranchInfo
         cell.textLabel?.text  = b.address
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        print(b.address)
         return cell
 
     }

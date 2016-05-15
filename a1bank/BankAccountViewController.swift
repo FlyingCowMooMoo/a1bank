@@ -18,6 +18,13 @@ class BankAccountViewController: UIViewController {
     var account:BankAccount!
     
     
+    @IBAction func topUpPressed(sender: UIButton) {
+        //topUpViewController
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("topUpViewController") as!TopUpViewController
+        controller.fundingAccount = self.account
+        controller.targetAccount = self.account
+        presentViewController(controller, animated: true, completion: nil)
+    }
     @IBAction func backButtonPressed(sender: UIButton)
     {
         let controller = storyboard?.instantiateViewControllerWithIdentifier("accountViewController") as!AccountViewController
