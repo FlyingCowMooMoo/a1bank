@@ -13,6 +13,12 @@
 		1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */; };
 		1D104CACD1C5E5A8FD922A2F /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
 		1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
+		DE54A67D1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */; };
+		DE54A67E1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */; };
+		DE54A67F1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */; };
+		DE54A6811CE80F1A00A3EBDE /* dummybranches.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */; };
+		DE54A6821CE80F1A00A3EBDE /* dummybranches.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */; };
+		DE54A6831CE80F1A00A3EBDE /* dummybranches.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */; };
 		DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */; };
 		DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */; };
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
@@ -87,6 +93,8 @@
 /* Begin PBXFileReference section */
 		1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountRepository.swift; sourceTree = "<group>"; };
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInfoRepository.swift; sourceTree = "<group>"; };
+		DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummybranches.csv; sourceTree = "<group>"; };
 		DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = accountViewTableCell.xib; sourceTree = "<group>"; };
 		DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = ../AccountTableViewCell.swift; sourceTree = "<group>"; };
 		DE5CF1441CB8D3E900373128 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -241,6 +249,7 @@
 				DE745D831C9FC6B200D55A8B /* UserRepository.swift */,
 				1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */,
 				1D104EE93767DE801F84DC8C /* ApplicationService.swift */,
+				DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */,
 			);
 			name = DataAccess;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 		DEF505171CE6EBBA003A584E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */,
 				DEF505181CE6EBD1003A584E /* dummyusers.csv */,
 				DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */,
 				DEF5051C1CE6EDAC003A584E /* dummybranches */,
@@ -373,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF505161CE6DC90003A584E /* Podfile in Resources */,
+				DE54A6811CE80F1A00A3EBDE /* dummybranches.csv in Resources */,
 				DE67C4591CA8F15800A7151C /* logo.png in Resources */,
 				DEF505191CE6EBD1003A584E /* dummyusers.csv in Resources */,
 				DE745D601C9FC67C00D55A8B /* LaunchScreen.storyboard in Resources */,
@@ -388,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE54A6821CE80F1A00A3EBDE /* dummybranches.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE54A6831CE80F1A00A3EBDE /* dummybranches.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE54A67D1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */,
 				DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */,
 				DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */,
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
@@ -445,6 +459,7 @@
 				DE5CF15C1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
 				DE5CF14E1CB9126200373128 /* UserRepository.swift in Sources */,
 				1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */,
+				DE54A67E1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +482,7 @@
 				DE5CF15D1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
 				DE5CF14F1CB9126200373128 /* UserRepository.swift in Sources */,
 				1D104CACD1C5E5A8FD922A2F /* ApplicationService.swift in Sources */,
+				DE54A67F1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
