@@ -106,6 +106,7 @@
                                 <accessibility key="accessibilityConfiguration" hint="The graphical logo of the bank" label="Bank Logo"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="XaF-T4-8FA"/>
+                                    <constraint firstAttribute="width" secondItem="XNm-ae-aub" secondAttribute="height" multiplier="143:172" id="yxB-iT-Agj"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -148,7 +149,7 @@
         <!--Locate Us View Controller-->
         <scene sceneID="F7D-3K-oKK">
             <objects>
-                <viewController id="leU-gZ-FWx" customClass="LocateUsViewController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="locateUsViewController" id="leU-gZ-FWx" customClass="LocateUsViewController" customModule="a1bank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZkK-xi-Vqt"/>
                         <viewControllerLayoutGuide type="bottom" id="s3Q-lA-KOU"/>
@@ -157,13 +158,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-Vs-3ab">
-                                <rect key="frame" x="140" y="304" width="321" height="276"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDz-Wf-Ai4">
                                 <rect key="frame" x="20" y="20" width="560" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="leU-gZ-FWx" eventType="touchUpInside" id="qsU-Gb-Qud"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="onG-94-uD9">
                                 <rect key="frame" x="140" y="58" width="321" height="230"/>
@@ -172,6 +172,20 @@
                                     <constraint firstAttribute="width" constant="321" id="c5y-3g-bwj"/>
                                 </constraints>
                             </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-Vs-3ab">
+                                <rect key="frame" x="140" y="304" width="321" height="276"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" id="jdF-mw-fFK">
+                                        <rect key="frame" x="0.0" y="28" width="321" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jdF-mw-fFK" id="PjV-ZZ-soN">
+                                            <rect key="frame" x="0.0" y="0.0" width="321" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -341,8 +355,7 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="154-oT-exh"/>
-                                    <constraint firstAttribute="width" secondItem="CCi-BB-456" secondAttribute="height" multiplier="83:103" id="caj-qe-g9J"/>
+                                    <constraint firstAttribute="width" constant="166" id="w6P-wc-3m5"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHm-81-MjC">
@@ -359,7 +372,7 @@
                                 <rect key="frame" x="180" y="285" width="240" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="This is the login button" identifier="loginButton" label="login button"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="rqa-LF-5sa"/>
+                                    <constraint firstAttribute="width" constant="240" id="oPs-Fo-tib"/>
                                 </constraints>
                                 <state key="normal" title="Login into Internet Banking">
                                     <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -372,37 +385,49 @@
                                 <rect key="frame" x="180" y="550" width="240" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="copyrighthome"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Fkb-sb-yrh"/>
+                                    <constraint firstAttribute="height" constant="30" id="rTa-Vh-tJk"/>
                                 </constraints>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMf-8x-2Ed">
+                                <rect key="frame" x="180" y="397" width="240" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="contactus button" identifier="contactUs" label="ContactUs"/>
+                                <state key="normal" title="Locate Us">
+                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locateUsPressed:" destination="UIA-HV-PNu" eventType="touchUpInside" id="Rxv-Qm-A7a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CCi-BB-456" firstAttribute="top" secondItem="JZ0-jr-dkL" secondAttribute="bottom" constant="8" symbolic="YES" id="0aW-1P-BQD"/>
-                            <constraint firstItem="CCi-BB-456" firstAttribute="width" secondItem="ae0-1G-3RV" secondAttribute="height" multiplier="83:300" id="4q1-hq-F5p"/>
-                            <constraint firstItem="WHm-81-MjC" firstAttribute="leading" secondItem="dg7-hK-fIG" secondAttribute="leading" id="FTz-B9-R6i"/>
-                            <constraint firstItem="dg7-hK-fIG" firstAttribute="centerY" secondItem="ae0-1G-3RV" secondAttribute="centerY" id="JzN-Lh-rWD"/>
-                            <constraint firstItem="CCi-BB-456" firstAttribute="centerX" secondItem="dg7-hK-fIG" secondAttribute="centerX" id="bjS-Oe-Vdz"/>
-                            <constraint firstItem="WHm-81-MjC" firstAttribute="top" secondItem="dg7-hK-fIG" secondAttribute="bottom" constant="44" id="cvW-im-BmC"/>
-                            <constraint firstItem="CCi-BB-456" firstAttribute="width" secondItem="dg7-hK-fIG" secondAttribute="height" multiplier="83:15" id="duQ-n2-nXi"/>
-                            <constraint firstItem="WHm-81-MjC" firstAttribute="trailing" secondItem="4k9-ab-Bjl" secondAttribute="trailing" id="fqO-8y-MPN"/>
-                            <constraint firstItem="WHm-81-MjC" firstAttribute="centerX" secondItem="ae0-1G-3RV" secondAttribute="centerX" id="hrd-uK-Hib"/>
-                            <constraint firstAttribute="bottom" secondItem="4k9-ab-Bjl" secondAttribute="bottom" constant="20" symbolic="YES" id="ibF-QN-ZD7"/>
-                            <constraint firstItem="4k9-ab-Bjl" firstAttribute="leading" secondItem="WHm-81-MjC" secondAttribute="leading" id="lcD-lY-a2Q"/>
-                            <constraint firstItem="dg7-hK-fIG" firstAttribute="trailing" secondItem="WHm-81-MjC" secondAttribute="trailing" id="pBR-sz-agS"/>
-                            <constraint firstItem="dg7-hK-fIG" firstAttribute="top" secondItem="CCi-BB-456" secondAttribute="bottom" constant="51" id="pgb-Vz-MYe"/>
+                            <constraint firstItem="WHm-81-MjC" firstAttribute="centerX" secondItem="ae0-1G-3RV" secondAttribute="centerX" id="1Fg-G3-DjU"/>
+                            <constraint firstItem="dg7-hK-fIG" firstAttribute="leading" secondItem="WHm-81-MjC" secondAttribute="leading" id="2zy-Sv-f3M"/>
+                            <constraint firstItem="IMf-8x-2Ed" firstAttribute="trailing" secondItem="4k9-ab-Bjl" secondAttribute="trailing" id="6lA-ee-ggY"/>
+                            <constraint firstItem="dg7-hK-fIG" firstAttribute="centerX" secondItem="CCi-BB-456" secondAttribute="centerX" id="JHb-KQ-C0M"/>
+                            <constraint firstItem="WHm-81-MjC" firstAttribute="leading" secondItem="IMf-8x-2Ed" secondAttribute="leading" id="JYp-Pf-qCY"/>
+                            <constraint firstAttribute="bottom" secondItem="4k9-ab-Bjl" secondAttribute="bottom" constant="20" symbolic="YES" id="OmO-7Z-Pc6"/>
+                            <constraint firstItem="WHm-81-MjC" firstAttribute="top" secondItem="dg7-hK-fIG" secondAttribute="bottom" constant="44" id="Ykt-1j-JGT"/>
+                            <constraint firstItem="CCi-BB-456" firstAttribute="top" secondItem="JZ0-jr-dkL" secondAttribute="bottom" constant="8" symbolic="YES" id="o7N-F3-V1s"/>
+                            <constraint firstItem="IMf-8x-2Ed" firstAttribute="leading" secondItem="4k9-ab-Bjl" secondAttribute="leading" id="plD-eD-hVe"/>
+                            <constraint firstItem="dg7-hK-fIG" firstAttribute="top" secondItem="CCi-BB-456" secondAttribute="bottom" constant="51" id="qyh-dx-UEy"/>
+                            <constraint firstItem="dg7-hK-fIG" firstAttribute="centerY" secondItem="ae0-1G-3RV" secondAttribute="centerY" id="rQ7-Y4-P1O"/>
+                            <constraint firstItem="IMf-8x-2Ed" firstAttribute="top" secondItem="WHm-81-MjC" secondAttribute="bottom" constant="8" symbolic="YES" id="rwb-my-bcD"/>
+                            <constraint firstItem="dg7-hK-fIG" firstAttribute="trailing" secondItem="WHm-81-MjC" secondAttribute="trailing" id="vu5-4W-brA"/>
+                            <constraint firstItem="WHm-81-MjC" firstAttribute="trailing" secondItem="IMf-8x-2Ed" secondAttribute="trailing" id="xDz-yG-pdo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contactUsButton" destination="WHm-81-MjC" id="A2B-Us-x47"/>
+                        <outlet property="locateUsButton" destination="IMf-8x-2Ed" id="hJp-vQ-ots"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXq-qz-ADi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898" y="-220"/>
+            <point key="canvasLocation" x="-888" y="-272"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="C6f-7A-LeH">
@@ -432,13 +457,6 @@
                                     <constraint firstAttribute="width" constant="76" id="h3C-G4-ZPM"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-dI-obK">
-                                <rect key="frame" x="23" y="28" width="560" height="30"/>
-                                <state key="normal" title="Back to Home"/>
-                                <connections>
-                                    <action selector="goBackHome:" destination="PoV-oG-DUI" eventType="touchUpInside" id="5qw-mA-JWm"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXd-l9-QXH">
                                 <rect key="frame" x="20" y="193" width="560" height="387"/>
                                 <subviews>
@@ -530,6 +548,13 @@
                                     <constraint firstItem="kBn-MH-Ybh" firstAttribute="leading" secondItem="C4m-Me-paC" secondAttribute="leading" id="vK8-kg-9l8"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-dI-obK">
+                                <rect key="frame" x="23" y="28" width="560" height="30"/>
+                                <state key="normal" title="Back to Home"/>
+                                <connections>
+                                    <action selector="goBackHome:" destination="PoV-oG-DUI" eventType="touchUpInside" id="5qw-mA-JWm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -563,18 +588,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
-                                <rect key="frame" x="179" y="28" width="242" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="242" id="2xt-M1-HpN"/>
-                                </constraints>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutPressed:" destination="DC4-bJ-Gux" eventType="touchDown" id="fu2-gE-Xub"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accountholdername" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kD-of-9AU">
                                 <rect key="frame" x="185" y="66" width="236" height="21"/>
                                 <constraints>
@@ -592,6 +605,18 @@
                                     <outlet property="delegate" destination="DC4-bJ-Gux" id="Iaz-nB-dxE"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-ac-wUo">
+                                <rect key="frame" x="179" y="28" width="242" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="2xt-M1-HpN"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.08235294118" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="DC4-bJ-Gux" eventType="touchDown" id="fu2-gE-Xub"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

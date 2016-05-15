@@ -131,7 +131,8 @@ class ApplicationService {
                     if(parts.count > 1)
                     {
                         let id = Int32(parts[0])
-                        let address = parts[1]
+                        var address = parts[1]
+                        address = address.stringByReplacingOccurrencesOfString("|", withString: ",")
                         instance.branchInfoRepository.createBranch(id!, address: address)
                     }
                 }

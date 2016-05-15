@@ -12,10 +12,20 @@ class HomeController: UIViewController {
 
     @IBOutlet var contactUsButton: UIButton!
     
+    @IBOutlet var locateUsButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    @IBAction func locateUsPressed(sender: UIButton)
+    {
+        
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("locateUsViewController") as! LocateUsViewController
+        presentViewController(controller, animated: true, completion: nil)
+    }
+    
     @IBAction func contactUsPressed(sender: UIButton)
     {
         let controller = storyboard?.instantiateViewControllerWithIdentifier("aboutUsViewController") as! AboutViewController

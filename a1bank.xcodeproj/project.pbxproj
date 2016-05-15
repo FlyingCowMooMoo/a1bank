@@ -19,6 +19,11 @@
 		DE54A6811CE80F1A00A3EBDE /* dummybranches.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */; };
 		DE54A6821CE80F1A00A3EBDE /* dummybranches.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */; };
 		DE54A6831CE80F1A00A3EBDE /* dummybranches.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */; };
+		DE54A6861CE8308D00A3EBDE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6851CE8308D00A3EBDE /* Currency.swift */; };
+		DE54A6871CE8308D00A3EBDE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6851CE8308D00A3EBDE /* Currency.swift */; };
+		DE54A6881CE8308D00A3EBDE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6851CE8308D00A3EBDE /* Currency.swift */; };
+		DE54A6891CE834B200A3EBDE /* LocateUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */; };
+		DE54A68A1CE834B300A3EBDE /* LocateUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */; };
 		DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */; };
 		DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */; };
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
@@ -94,6 +99,7 @@
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInfoRepository.swift; sourceTree = "<group>"; };
 		DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummybranches.csv; sourceTree = "<group>"; };
+		DE54A6851CE8308D00A3EBDE /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = accountViewTableCell.xib; sourceTree = "<group>"; };
 		DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = ../AccountTableViewCell.swift; sourceTree = "<group>"; };
 		DE5CF1441CB8D3E900373128 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -155,6 +161,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE54A6841CE82F8F00A3EBDE /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				DE54A6851CE8308D00A3EBDE /* Currency.swift */,
+			);
+			name = Rest;
+			sourceTree = "<group>";
+		};
 		DE745D491C9FC67C00D55A8B = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +195,7 @@
 		DE745D541C9FC67C00D55A8B /* a1bank */ = {
 			isa = PBXGroup;
 			children = (
+				DE54A6841CE82F8F00A3EBDE /* Rest */,
 				DEF5051E1CE6F6AF003A584E /* CoreData */,
 				DEF505171CE6EBBA003A584E /* Data */,
 				DEF505141CE6D883003A584E /* DataAccess */,
@@ -430,6 +445,7 @@
 				DEB137191CE1FBA000E1F17A /* BranchInfo.swift in Sources */,
 				1D1047CC60ACE12D99FEC553 /* BankAccountRepository.swift in Sources */,
 				DEB137151CE1FBA000E1F17A /* BankAccount.swift in Sources */,
+				DE54A6861CE8308D00A3EBDE /* Currency.swift in Sources */,
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
 				DEB137171CE1FBA000E1F17A /* User.swift in Sources */,
 				DEF505211CE6F71F003A584E /* Bank.xcdatamodeld in Sources */,
@@ -448,11 +464,13 @@
 				DEF505251CE716D9003A584E /* BranchInfo.swift in Sources */,
 				DE5CF1521CB9127900373128 /* AccountViewController.swift in Sources */,
 				DEF505241CE716D9003A584E /* User.swift in Sources */,
+				DE54A6891CE834B200A3EBDE /* LocateUsViewController.swift in Sources */,
 				DEF505231CE716D4003A584E /* BankAccount.swift in Sources */,
 				DE5CF1561CB9127E00373128 /* HomeController.swift in Sources */,
 				DE5CF15E1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */,
 				DE5CF15C1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
+				DE54A6871CE8308D00A3EBDE /* Currency.swift in Sources */,
 				DE5CF14E1CB9126200373128 /* UserRepository.swift in Sources */,
 				1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */,
 				DE54A67E1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */,
@@ -471,11 +489,13 @@
 				DEF505271CE716DA003A584E /* BranchInfo.swift in Sources */,
 				DE5CF1531CB9127900373128 /* AccountViewController.swift in Sources */,
 				DEF505261CE716DA003A584E /* User.swift in Sources */,
+				DE54A68A1CE834B300A3EBDE /* LocateUsViewController.swift in Sources */,
 				DEF505221CE716D3003A584E /* BankAccount.swift in Sources */,
 				DE5CF1571CB9127F00373128 /* HomeController.swift in Sources */,
 				DE5CF15F1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */,
 				DE5CF15D1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
+				DE54A6881CE8308D00A3EBDE /* Currency.swift in Sources */,
 				DE5CF14F1CB9126200373128 /* UserRepository.swift in Sources */,
 				1D104CACD1C5E5A8FD922A2F /* ApplicationService.swift in Sources */,
 				DE54A67F1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */,
