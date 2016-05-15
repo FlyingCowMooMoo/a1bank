@@ -106,10 +106,10 @@ class BankAccountRepository {
                 let r = res as! NSManagedObject
                 let id = r.valueForKey("id") as! Int
                 var balance = r.valueForKey("balance") as! Double;
-                let owner = r.valueForKey("owner") as! Int32;
+                let owner = r.valueForKey("owner") as! Int;
                 let friendlyName = r.valueForKey("friendlyName") as! String;
                 let currency = r.valueForKey("currency") as! String;
-                let b = BankAccount(id: Int32(id), balance: balance, ownerId: owner, friendName: friendlyName, currency: currency)
+                let b = BankAccount(id: Int32(id), balance: balance, ownerId: Int32(owner), friendName: friendlyName, currency: currency)
                 acc.insert(b)
             }
             

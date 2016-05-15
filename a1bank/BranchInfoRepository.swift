@@ -21,7 +21,7 @@ class BranchInfoRepository
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context:NSManagedObjectContext = appDelegate.managedObjectContext
         
-        let u = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context)
+        let u = NSEntityDescription.insertNewObjectForEntityForName("BranchInfo", inManagedObjectContext: context)
         
         u.setValue(NSNumber(int: id), forKey: "id")
         u.setValue(address, forKey: "address")
@@ -44,7 +44,7 @@ class BranchInfoRepository
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var context:NSManagedObjectContext = appDelegate.managedObjectContext
         
-        var request = NSFetchRequest(entityName: "Users")
+        var request = NSFetchRequest(entityName: "BranchInfo")
         request.returnsObjectsAsFaults = false;
         var results: NSArray
         

@@ -63,7 +63,6 @@
 		DEF505161CE6DC90003A584E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEF505151CE6DC90003A584E /* Podfile */; };
 		DEF505191CE6EBD1003A584E /* dummyusers.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF505181CE6EBD1003A584E /* dummyusers.csv */; };
 		DEF5051B1CE6ED36003A584E /* dummyaccounts.csv in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */; };
-		DEF5051D1CE6EDAC003A584E /* dummybranches in Resources */ = {isa = PBXBuildFile; fileRef = DEF5051C1CE6EDAC003A584E /* dummybranches */; };
 		DEF505211CE6F71F003A584E /* Bank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEF5051F1CE6F71F003A584E /* Bank.xcdatamodeld */; };
 		DEF505221CE716D3003A584E /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */; };
 		DEF505231CE716D4003A584E /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1370F1CE1FBA000E1F17A /* BankAccount.swift */; };
@@ -127,7 +126,6 @@
 		DEF505151CE6DC90003A584E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		DEF505181CE6EBD1003A584E /* dummyusers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummyusers.csv; sourceTree = "<group>"; };
 		DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummyaccounts.csv; sourceTree = "<group>"; };
-		DEF5051C1CE6EDAC003A584E /* dummybranches */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummybranches; sourceTree = "<group>"; };
 		DEF505201CE6F71F003A584E /* Bank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bank.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,7 +258,6 @@
 				DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */,
 				DEF505181CE6EBD1003A584E /* dummyusers.csv */,
 				DEF5051A1CE6ED36003A584E /* dummyaccounts.csv */,
-				DEF5051C1CE6EDAC003A584E /* dummybranches */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -391,7 +388,6 @@
 				DE745D5D1C9FC67C00D55A8B /* Assets.xcassets in Resources */,
 				DE745D5B1C9FC67C00D55A8B /* Main.storyboard in Resources */,
 				DEF5051B1CE6ED36003A584E /* dummyaccounts.csv in Resources */,
-				DEF5051D1CE6EDAC003A584E /* dummybranches in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
