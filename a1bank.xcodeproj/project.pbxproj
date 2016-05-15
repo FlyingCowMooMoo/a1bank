@@ -30,6 +30,9 @@
 		DE54A6911CE84D6800A3EBDE /* TopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */; };
 		DE54A6921CE84D6800A3EBDE /* TopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */; };
 		DE54A6931CE84D6800A3EBDE /* TopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */; };
+		DE54A6B61CE86FC400A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
+		DE54A6B71CE86FC400A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
+		DE54A6B81CE86FC400A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
 		DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */; };
 		DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */; };
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
@@ -108,6 +111,7 @@
 		DE54A6851CE8308D00A3EBDE /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		DE54A68C1CE84CB100A3EBDE /* PickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerDialog.swift; sourceTree = "<group>"; };
 		DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopUpViewController.swift; sourceTree = "<group>"; };
+		DE54A6B51CE86FC400A3EBDE /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = accountViewTableCell.xib; sourceTree = "<group>"; };
 		DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = ../AccountTableViewCell.swift; sourceTree = "<group>"; };
 		DE5CF1441CB8D3E900373128 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				DE54A68C1CE84CB100A3EBDE /* PickerDialog.swift */,
+				DE54A6B51CE86FC400A3EBDE /* Just.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
 				DE54A6911CE84D6800A3EBDE /* TopUpViewController.swift in Sources */,
 				DEB137171CE1FBA000E1F17A /* User.swift in Sources */,
+				DE54A6B61CE86FC400A3EBDE /* Just.swift in Sources */,
 				DEF505211CE6F71F003A584E /* Bank.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE54A6B71CE86FC400A3EBDE /* Just.swift in Sources */,
 				DE745D6B1C9FC67C00D55A8B /* a1bankTests.swift in Sources */,
 				DE5CF1581CB9128300373128 /* AppState.swift in Sources */,
 				DE5CF15A1CB9128600373128 /* AboutViewController.swift in Sources */,
@@ -503,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE54A6B81CE86FC400A3EBDE /* Just.swift in Sources */,
 				DE745D761C9FC67C00D55A8B /* a1bankUITests.swift in Sources */,
 				DE5CF1591CB9128400373128 /* AppState.swift in Sources */,
 				DE5CF15B1CB9128600373128 /* AboutViewController.swift in Sources */,

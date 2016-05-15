@@ -11,4 +11,5 @@ import Foundation
 public class Currency
 {
 
+    
 }
