@@ -66,7 +66,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         var cell:AccountTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! AccountTableViewCell
         let account = self.accounts[indexPath.row] as! BankAccount
         cell.accountNameLabel.text = account.friendlyName
-        cell.accountBalanceLabel.text = "$" + String(account.balance)
+        cell.accountBalanceLabel.text = self.getCurrencySymbol(account.currency) + String(account.balance)
         cell.currencyLabel.text = account.currency
         return cell
     }
@@ -80,6 +80,15 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         //controller.accountNameLabelValue.text = acc.friendlyName
         //controller.balanceLabelValue.text = "$" + String(acc.balance)
         presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    private func getCurrencySymbol(currency: String) -> String
+    {
+        let localeComponents = [NSLocaleCurrencyCode: currency]
+        let localeIdentifier = NSLocale.localeIdentifierFromComponents(localeComponents)
+        let locale = NSLocale(localeIdentifier: localeIdentifier)
+        let currencySymbol = locale.objectForKey(NSLocaleCurrencySymbol) as! String
+        return currencySymbol
     }
 
 }

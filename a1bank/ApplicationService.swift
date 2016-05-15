@@ -33,6 +33,11 @@ class ApplicationService {
     }
     
     
+    static func saveAccount(account: BankAccount) -> Bool
+    {
+        return instance.bankAccountRepository.saveAccount(account)
+    }
+    
     static func authenticateUser(userName: String, password: String) -> Bool {
         
         if let user = instance.userRepository.getUser(userName) {

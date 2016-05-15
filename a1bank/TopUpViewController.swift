@@ -70,7 +70,8 @@ class TopUpViewController: UIViewController
         
         self.targetTextField.text = "1"
     
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         
     }
     
@@ -79,8 +80,11 @@ class TopUpViewController: UIViewController
         if targetTextField.text?.isEmpty == false
         {
             let tg = Double(targetTextField.text!)
-            let rr = 1.00 / rate
-            fundingTextField.text = String(rr * tg!)
+            if tg != nil
+            {
+                let rr = 1.00 / rate
+                fundingTextField.text = String(rr * tg!)
+            }
         }
     }
     @IBAction func fundingChanged(sender: AnyObject)
@@ -88,7 +92,10 @@ class TopUpViewController: UIViewController
         if fundingTextField.text?.isEmpty == false
         {
             let fd = Double(fundingTextField.text!)
-            targetTextField.text = String(fd! * self.rate)
+            if fd != nil
+            {
+                targetTextField.text = String(fd! * self.rate)
+            }
         }
     }
     
@@ -117,5 +124,59 @@ class TopUpViewController: UIViewController
         self.fundingAccountBalance.text = String(self.fundingAccount.balance)
         self.fundingAccountCurrency.text = self.fundingAccount.currency
         self.fundingCurrencyLabel.text = self.fundingAccount.currency
+    }
+    
+    @IBAction func submitPressed(sender: UIButton)
+    {
+        let fd = Double(fundingTextField.text!)
+        let tg = Double(targetTextField.text!)
+        if fundingTextField.text?.isEmpty == true || targetTextField.text?.isEmpty == true
+        {
+            popup("Error", msg: "Some information is missing")
+            return
+        }
+        
+        if fd > fundingAccount.balance
+        {
+            popup("Error", msg: "Insufficient Funds")
+            return
+        }
+        
+        self.fundingAccount.balance = self.fundingAccount.balance - fd!
+        self.targetAccount.balance = self.targetAccount.balance + tg!
+        
+        let resA = ApplicationService.saveAccount(self.fundingAccount)
+        let resB = ApplicationService.saveAccount(self.targetAccount)
+        
+        if resA == true && resB == true
+        {
+            popup("Ok", msg: "You bought moneyz")
+            return
+        }
+        else
+        {
+            popup("Error", msg: "Failed to buy money, please try again latert")
+        }
+        
+    }
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+    
+    @IBAction func backPressed(sender: UIButton) {
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("accountViewController") as!AccountViewController
+        controller.username = AppState.sharedInstance.currentUser
+        presentViewController(controller, animated: true, completion: nil)
+    }
+    private func popup(title: String, msg: String)
+    {
+        var refreshAlert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Ok")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
     }
 }
