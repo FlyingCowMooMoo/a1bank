@@ -55,6 +55,11 @@ class ApplicationService {
         return accs
     }
     
+    static func getBranches() -> Set<BranchInfo>
+    {
+        return instance.branchInfoRepository.getAll()
+    }
+    
     
     private static func dropTable(tableName: String)
     {

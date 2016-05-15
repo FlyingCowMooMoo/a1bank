@@ -14,6 +14,8 @@ class AccountTableViewCell: UITableViewCell {
     @IBOutlet var accountBalanceLabel: UILabel!
     @IBOutlet var accountLabel: UILabel!
     @IBOutlet var balanceLabel: UILabel!
+
+    @IBOutlet var currencyLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

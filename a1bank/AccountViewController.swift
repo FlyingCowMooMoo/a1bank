@@ -67,6 +67,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         let account = self.accounts[indexPath.row] as! BankAccount
         cell.accountNameLabel.text = account.friendlyName
         cell.accountBalanceLabel.text = "$" + String(account.balance)
+        cell.currencyLabel.text = account.currency
         return cell
     }
     

@@ -1,52 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="CBl-So-DLw" customClass="AccountTableViewCell" customModule="a1bank">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="CBl-So-DLw" customClass="AccountTableViewCell" customModule="a1bank">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="81"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CBl-So-DLw" id="ChX-JT-nC0">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <rect key="frame" x="0.0" y="0.0" width="293" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="e4s-xu-cfP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="e4s-xu-cfP">
                         <rect key="frame" x="8" y="8" width="68" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ex1-C5-yaO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ex1-C5-yaO">
                         <rect key="frame" x="8" y="30" width="61" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="fNL-36-jPB"/>
+                            <constraint firstAttribute="width" constant="61" id="tT6-HD-W5S"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$9999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Fg-Iq-cGz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="LSq-OO-qF7">
+                        <rect key="frame" x="8" y="51" width="61" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Fg-Iq-cGz">
                         <rect key="frame" x="84" y="30" width="152" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="accountnameval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="fOB-ds-1bB">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accountnameval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="fOB-ds-1bB">
                         <rect key="frame" x="84" y="8" width="152" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="MMC-Y9-5gy">
+                        <rect key="frame" x="84" y="51" width="152" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="3Fg-Iq-cGz" firstAttribute="leading" secondItem="Ex1-C5-yaO" secondAttribute="trailing" constant="15" id="1yM-rc-krG"/>
+                    <constraint firstItem="e4s-xu-cfP" firstAttribute="top" secondItem="ChX-JT-nC0" secondAttribute="topMargin" id="5kv-c9-iaq"/>
+                    <constraint firstItem="LSq-OO-qF7" firstAttribute="leading" secondItem="ChX-JT-nC0" secondAttribute="leadingMargin" id="633-ZS-eNM"/>
+                    <constraint firstItem="MMC-Y9-5gy" firstAttribute="firstBaseline" secondItem="LSq-OO-qF7" secondAttribute="firstBaseline" id="6Gy-FL-bXV"/>
+                    <constraint firstItem="Ex1-C5-yaO" firstAttribute="top" secondItem="e4s-xu-cfP" secondAttribute="bottom" constant="1" id="CMI-Al-guK"/>
+                    <constraint firstItem="LSq-OO-qF7" firstAttribute="top" secondItem="Ex1-C5-yaO" secondAttribute="bottom" id="HHo-oT-Kh7"/>
+                    <constraint firstItem="MMC-Y9-5gy" firstAttribute="leading" secondItem="3Fg-Iq-cGz" secondAttribute="leading" id="O9d-hl-KuW"/>
+                    <constraint firstItem="fOB-ds-1bB" firstAttribute="leading" secondItem="e4s-xu-cfP" secondAttribute="trailing" constant="8" symbolic="YES" id="Rwc-M4-hRX"/>
+                    <constraint firstItem="Ex1-C5-yaO" firstAttribute="firstBaseline" secondItem="3Fg-Iq-cGz" secondAttribute="firstBaseline" id="Rzh-Bg-bTL"/>
+                    <constraint firstItem="LSq-OO-qF7" firstAttribute="bottom" secondItem="ChX-JT-nC0" secondAttribute="bottomMargin" id="SY7-nT-T7I"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fOB-ds-1bB" secondAttribute="trailing" constant="49" id="Un9-1C-Xqa"/>
+                    <constraint firstItem="3Fg-Iq-cGz" firstAttribute="trailing" secondItem="fOB-ds-1bB" secondAttribute="trailing" id="Vg6-zP-CXn"/>
+                    <constraint firstItem="Ex1-C5-yaO" firstAttribute="trailing" secondItem="LSq-OO-qF7" secondAttribute="trailing" id="X1m-QK-Zbb"/>
+                    <constraint firstItem="LSq-OO-qF7" firstAttribute="baseline" secondItem="MMC-Y9-5gy" secondAttribute="baseline" id="al4-d3-Ce7"/>
+                    <constraint firstItem="fOB-ds-1bB" firstAttribute="baseline" secondItem="e4s-xu-cfP" secondAttribute="baseline" id="bbm-JH-Y4t"/>
+                    <constraint firstItem="MMC-Y9-5gy" firstAttribute="trailing" secondItem="3Fg-Iq-cGz" secondAttribute="trailing" id="leP-YS-AqD"/>
+                    <constraint firstItem="fOB-ds-1bB" firstAttribute="leading" secondItem="3Fg-Iq-cGz" secondAttribute="leading" id="mcR-JV-1Re"/>
+                    <constraint firstItem="e4s-xu-cfP" firstAttribute="firstBaseline" secondItem="fOB-ds-1bB" secondAttribute="firstBaseline" id="rwX-Va-c4w"/>
+                    <constraint firstItem="Ex1-C5-yaO" firstAttribute="centerY" secondItem="ChX-JT-nC0" secondAttribute="centerY" id="sBV-LU-pj5"/>
+                    <constraint firstItem="Ex1-C5-yaO" firstAttribute="leading" secondItem="e4s-xu-cfP" secondAttribute="leading" id="xdO-GX-VVU"/>
+                    <constraint firstItem="3Fg-Iq-cGz" firstAttribute="baseline" secondItem="Ex1-C5-yaO" secondAttribute="baseline" id="zKb-h6-k5s"/>
+                    <constraint firstItem="Ex1-C5-yaO" firstAttribute="leading" secondItem="LSq-OO-qF7" secondAttribute="leading" id="zLn-4n-WOQ"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="accountBalanceLabel" destination="3Fg-Iq-cGz" id="rwN-6s-J20"/>
                 <outlet property="accountLabel" destination="e4s-xu-cfP" id="L0Y-lN-eUv"/>
                 <outlet property="accountNameLabel" destination="fOB-ds-1bB" id="opT-b8-2vd"/>
                 <outlet property="balanceLabel" destination="Ex1-C5-yaO" id="SQ6-CK-zcv"/>
+                <outlet property="currencyLabel" destination="MMC-Y9-5gy" id="GWE-Ne-hz5"/>
             </connections>
-            <point key="canvasLocation" x="222" y="357"/>
+            <point key="canvasLocation" x="256.5" y="219.5"/>
         </tableViewCell>
     </objects>
 </document>

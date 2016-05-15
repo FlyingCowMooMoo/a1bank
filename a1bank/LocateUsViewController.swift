@@ -13,10 +13,14 @@ class LocateUsViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    var data = []
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data = Array(ApplicationService.getBranches())
 
         // Do any additional setup after loading the view.
     }
@@ -32,6 +36,7 @@ class LocateUsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let address = data[indexPath.row].address
         return UITableViewCell()
     }
     
