@@ -13,6 +13,7 @@ class ApplicationService {
     
     var userRepository = UserRepository()
     var bankAccountRepository = BankAccountRepository()
+    var branchInfoRepository = BranchInfoRepository()
     
     static let instance = ApplicationService()
     
@@ -25,13 +26,14 @@ class ApplicationService {
     {
         dropTable("Users")
         dropTable("BankAccounts")
+        dropTable("BranchInfo")
         populateDummyAccounts()
         populateDummyUsers()
+        populateDummyBranches()
     }
     
     
     static func authenticateUser(userName: String, password: String) -> Bool {
-        let user = instance.userRepository.getUser(userName)
         
         if let user = instance.userRepository.getUser(userName) {
             if (user.password == password) {
@@ -44,8 +46,6 @@ class ApplicationService {
     
     static func getUserAccounts(userName: String) -> Set<BankAccount> {
         var accs = Set<BankAccount>()
-        var user = instance.userRepository.getUser(userName)
-        
         print("Getting account for user " + userName)
         if let user = instance.userRepository.getUser(userName) {
             accs = instance.bankAccountRepository.getAllAccountsOfUser(user.id)
@@ -97,6 +97,37 @@ class ApplicationService {
                         let owner = Int32(parts[4])
                         
                         instance.bankAccountRepository.createAccount(id!, balance: balance!, ownerId: owner!, friendlyName: name, currency: currency)
+                    }
+                }
+            }
+        }
+        catch let err as NSError
+        {
+            print(err)
+        }
+        
+        return true
+    }
+    
+    private static func populateDummyBranches() -> Bool
+    {
+        
+        do
+        {
+            
+            if let path = NSBundle.mainBundle().pathForResource("dummybranches", ofType: "csv")
+            {
+                let data = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
+                
+                let myStrings = data.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                for str in myStrings
+                {
+                    let parts = str.componentsSeparatedByString(",")
+                    if(parts.count > 1)
+                    {
+                        let id = Int32(parts[0])
+                        let address = parts[1]
+                        instance.branchInfoRepository.createBranch(id!, address: address)
                     }
                 }
             }
