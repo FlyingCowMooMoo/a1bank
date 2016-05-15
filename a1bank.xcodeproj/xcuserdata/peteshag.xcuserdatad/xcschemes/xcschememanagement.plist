@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>currencyWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>DE54A6C01CE8A63500A3EBDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DE745D511C9FC67C00D55A8B</key>
 		<dict>
 			<key>primary</key>

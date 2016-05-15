@@ -36,6 +36,17 @@
 		DE54A6BA1CE880BB00A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
 		DE54A6BB1CE880BB00A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
 		DE54A6BC1CE880BB00A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
+		DE54A6C41CE8A63500A3EBDE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE54A6C31CE8A63500A3EBDE /* NotificationCenter.framework */; };
+		DE54A6C71CE8A63500A3EBDE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6C61CE8A63500A3EBDE /* TodayViewController.swift */; };
+		DE54A6CA1CE8A63500A3EBDE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE54A6C81CE8A63500A3EBDE /* MainInterface.storyboard */; };
+		DE54A6CE1CE8A63500A3EBDE /* currencyWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DE54A6C11CE8A63500A3EBDE /* currencyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DE54A6D41CE8A96B00A3EBDE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6D31CE8A96B00A3EBDE /* Utils.swift */; };
+		DE54A6D51CE8A96B00A3EBDE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6D31CE8A96B00A3EBDE /* Utils.swift */; };
+		DE54A6D61CE8A96B00A3EBDE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6D31CE8A96B00A3EBDE /* Utils.swift */; };
+		DE54A6DA1CE8ACCA00A3EBDE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6851CE8308D00A3EBDE /* Currency.swift */; };
+		DE54A6DF1CE8ACD900A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
+		DE54A6E01CE8ACD900A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
+		DE54A6E11CE8ACD900A3EBDE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6D31CE8A96B00A3EBDE /* Utils.swift */; };
 		DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */; };
 		DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */; };
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
@@ -90,6 +101,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DE54A6CC1CE8A63500A3EBDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE745D4A1C9FC67C00D55A8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE54A6C01CE8A63500A3EBDE;
+			remoteInfo = currencyWidget;
+		};
 		DE745D671C9FC67C00D55A8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE745D4A1C9FC67C00D55A8B /* Project object */;
@@ -106,6 +124,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DE54A6D21CE8A63500A3EBDE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DE54A6CE1CE8A63500A3EBDE /* currencyWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountRepository.swift; sourceTree = "<group>"; };
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
@@ -116,6 +148,12 @@
 		DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopUpViewController.swift; sourceTree = "<group>"; };
 		DE54A6B51CE86FC400A3EBDE /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		DE54A6B91CE880BB00A3EBDE /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		DE54A6C11CE8A63500A3EBDE /* currencyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = currencyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE54A6C31CE8A63500A3EBDE /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		DE54A6C61CE8A63500A3EBDE /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		DE54A6C91CE8A63500A3EBDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		DE54A6CB1CE8A63500A3EBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE54A6D31CE8A96B00A3EBDE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = accountViewTableCell.xib; sourceTree = "<group>"; };
 		DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = ../AccountTableViewCell.swift; sourceTree = "<group>"; };
 		DE5CF1441CB8D3E900373128 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -152,6 +190,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE54A6BE1CE8A63500A3EBDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE54A6C41CE8A63500A3EBDE /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE745D4F1C9FC67C00D55A8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,8 +237,27 @@
 				DE54A68C1CE84CB100A3EBDE /* PickerDialog.swift */,
 				DE54A6B51CE86FC400A3EBDE /* Just.swift */,
 				DE54A6B91CE880BB00A3EBDE /* Error.swift */,
+				DE54A6D31CE8A96B00A3EBDE /* Utils.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		DE54A6C21CE8A63500A3EBDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE54A6C31CE8A63500A3EBDE /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE54A6C51CE8A63500A3EBDE /* currencyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				DE54A6C61CE8A63500A3EBDE /* TodayViewController.swift */,
+				DE54A6C81CE8A63500A3EBDE /* MainInterface.storyboard */,
+				DE54A6CB1CE8A63500A3EBDE /* Info.plist */,
+			);
+			path = currencyWidget;
 			sourceTree = "<group>";
 		};
 		DE745D491C9FC67C00D55A8B = {
@@ -204,6 +269,8 @@
 				DE745D541C9FC67C00D55A8B /* a1bank */,
 				DE745D691C9FC67C00D55A8B /* a1bankTests */,
 				DE745D741C9FC67C00D55A8B /* a1bankUITests */,
+				DE54A6C51CE8A63500A3EBDE /* currencyWidget */,
+				DE54A6C21CE8A63500A3EBDE /* Frameworks */,
 				DE745D531C9FC67C00D55A8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -214,6 +281,7 @@
 				DE745D521C9FC67C00D55A8B /* a1bank.app */,
 				DE745D661C9FC67C00D55A8B /* a1bankTests.xctest */,
 				DE745D711C9FC67C00D55A8B /* a1bankUITests.xctest */,
+				DE54A6C11CE8A63500A3EBDE /* currencyWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +384,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE54A6C01CE8A63500A3EBDE /* currencyWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE54A6CF1CE8A63500A3EBDE /* Build configuration list for PBXNativeTarget "currencyWidget" */;
+			buildPhases = (
+				DE54A6BD1CE8A63500A3EBDE /* Sources */,
+				DE54A6BE1CE8A63500A3EBDE /* Frameworks */,
+				DE54A6BF1CE8A63500A3EBDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = currencyWidget;
+			productName = currencyWidget;
+			productReference = DE54A6C11CE8A63500A3EBDE /* currencyWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DE745D511C9FC67C00D55A8B /* a1bank */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE745D7A1C9FC67C00D55A8B /* Build configuration list for PBXNativeTarget "a1bank" */;
@@ -323,10 +408,12 @@
 				DE745D4E1C9FC67C00D55A8B /* Sources */,
 				DE745D4F1C9FC67C00D55A8B /* Frameworks */,
 				DE745D501C9FC67C00D55A8B /* Resources */,
+				DE54A6D21CE8A63500A3EBDE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DE54A6CD1CE8A63500A3EBDE /* PBXTargetDependency */,
 			);
 			name = a1bank;
 			productName = a1bank;
@@ -379,6 +466,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Panagiotis Papastamatis";
 				TargetAttributes = {
+					DE54A6C01CE8A63500A3EBDE = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					DE745D511C9FC67C00D55A8B = {
 						CreatedOnToolsVersion = 7.2.1;
 						SystemCapabilities = {
@@ -413,11 +503,20 @@
 				DE745D511C9FC67C00D55A8B /* a1bank */,
 				DE745D651C9FC67C00D55A8B /* a1bankTests */,
 				DE745D701C9FC67C00D55A8B /* a1bankUITests */,
+				DE54A6C01CE8A63500A3EBDE /* currencyWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE54A6BF1CE8A63500A3EBDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE54A6CA1CE8A63500A3EBDE /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE745D501C9FC67C00D55A8B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,6 +552,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE54A6BD1CE8A63500A3EBDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE54A6DA1CE8ACCA00A3EBDE /* Currency.swift in Sources */,
+				DE54A6C71CE8A63500A3EBDE /* TodayViewController.swift in Sources */,
+				DE54A6E01CE8ACD900A3EBDE /* Error.swift in Sources */,
+				DE54A6DF1CE8ACD900A3EBDE /* Just.swift in Sources */,
+				DE54A6E11CE8ACD900A3EBDE /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE745D4E1C9FC67C00D55A8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +573,7 @@
 				DE54A68D1CE84CB100A3EBDE /* PickerDialog.swift in Sources */,
 				DE67C45D1CA8FA0400A7151C /* LoginViewController.swift in Sources */,
 				DE745D581C9FC67C00D55A8B /* ViewController.swift in Sources */,
+				DE54A6D41CE8A96B00A3EBDE /* Utils.swift in Sources */,
 				DE5CF1491CB8DEA900373128 /* AboutViewController.swift in Sources */,
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
@@ -503,6 +615,7 @@
 				DE5CF1561CB9127E00373128 /* HomeController.swift in Sources */,
 				DE5CF15E1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				DE54A6BB1CE880BB00A3EBDE /* Error.swift in Sources */,
+				DE54A6D51CE8A96B00A3EBDE /* Utils.swift in Sources */,
 				1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */,
 				DE5CF15C1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
 				DE54A6871CE8308D00A3EBDE /* Currency.swift in Sources */,
@@ -532,6 +645,7 @@
 				DE5CF1571CB9127F00373128 /* HomeController.swift in Sources */,
 				DE5CF15F1CB9128C00373128 /* AppDelegate.swift in Sources */,
 				DE54A6BC1CE880BB00A3EBDE /* Error.swift in Sources */,
+				DE54A6D61CE8A96B00A3EBDE /* Utils.swift in Sources */,
 				1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */,
 				DE5CF15D1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
 				DE54A6881CE8308D00A3EBDE /* Currency.swift in Sources */,
@@ -545,6 +659,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DE54A6CD1CE8A63500A3EBDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE54A6C01CE8A63500A3EBDE /* currencyWidget */;
+			targetProxy = DE54A6CC1CE8A63500A3EBDE /* PBXContainerItemProxy */;
+		};
 		DE745D681C9FC67C00D55A8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DE745D511C9FC67C00D55A8B /* a1bank */;
@@ -558,6 +677,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DE54A6C81CE8A63500A3EBDE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE54A6C91CE8A63500A3EBDE /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		DE745D591C9FC67C00D55A8B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -577,6 +704,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE54A6D01CE8A63500A3EBDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = currencyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.student.s3402299.a1bank.currencyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DE54A6D11CE8A63500A3EBDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = currencyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.student.s3402299.a1bank.currencyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		DE745D781C9FC67C00D55A8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -664,6 +815,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = a1bank/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -677,6 +829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = a1bank/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -737,6 +890,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE54A6CF1CE8A63500A3EBDE /* Build configuration list for PBXNativeTarget "currencyWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE54A6D01CE8A63500A3EBDE /* Debug */,
+				DE54A6D11CE8A63500A3EBDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DE745D4D1C9FC67C00D55A8B /* Build configuration list for PBXProject "a1bank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
