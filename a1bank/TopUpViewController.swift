@@ -78,8 +78,8 @@ class TopUpViewController: UIViewController
     {
         if targetTextField.text?.isEmpty == false
         {
-            var tg = Double(targetTextField.text!)
-            var rr = 1.00 / rate
+            let tg = Double(targetTextField.text!)
+            let rr = 1.00 / rate
             fundingTextField.text = String(rr * tg!)
         }
     }
@@ -87,7 +87,7 @@ class TopUpViewController: UIViewController
     {
         if fundingTextField.text?.isEmpty == false
         {
-            var fd = Double(fundingTextField.text!)
+            let fd = Double(fundingTextField.text!)
             targetTextField.text = String(fd! * self.rate)
         }
     }

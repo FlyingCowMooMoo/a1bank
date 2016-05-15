@@ -16,6 +16,15 @@
 * Core Data as an "ORM"<sup>(well it tries to be one)</sup>
 
 
+#### Third Party Code
+
+- Just Http  - A Client-side HTTP library - https://github.com/JustHTTP/Just
+- PickerDialog - UIPickerView in a dialog - https://github.com/aguynamedloren/ios-picker-dialog
+
+All third party libraries used are licensed under the MIT license, see https://opensource.org/licenses/MIT
+
+
+
 Not relevant anymore
 
 <del>
