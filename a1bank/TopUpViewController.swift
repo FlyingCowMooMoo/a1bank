@@ -13,6 +13,8 @@ class TopUpViewController: UIViewController
     var fundingAccount:BankAccount!
     var accounts = []
     
+    var rate = 0.0
+    
     @IBOutlet var targetAccountName: UILabel!
     
     @IBOutlet var targetAccountBalance: UILabel!
@@ -31,6 +33,10 @@ class TopUpViewController: UIViewController
     
     @IBOutlet var exchangeRateLabel: UILabel!
     
+    
+    
+    @IBOutlet var targetTextField: UITextField!
+    @IBOutlet var fundingTextField: UITextField!
     @IBAction func changeSourcePressed(sender: UIButton)
     {
         var pickerData: [[String : String]] = []
@@ -50,6 +56,7 @@ class TopUpViewController: UIViewController
             let val = Int(value)
             self.fundingAccount = ApplicationService.getAccount(Int32(val!))
             self.updateFundingAccountLabels()
+            self.updateExchangeRateLabel()
             
         }
     }
@@ -61,12 +68,39 @@ class TopUpViewController: UIViewController
         self.updateFundingAccountLabels()
         self.updateTargetAccountLabels()
         
+        self.targetTextField.text = "1"
+    
         
+        
+    }
+    
+    @IBAction func targetChanged(sender: AnyObject)
+    {
+        if targetTextField.text?.isEmpty == false
+        {
+            var tg = Double(targetTextField.text!)
+            var rr = 1.00 / rate
+            fundingTextField.text = String(rr * tg!)
+        }
+    }
+    @IBAction func fundingChanged(sender: AnyObject)
+    {
+        if fundingTextField.text?.isEmpty == false
+        {
+            var fd = Double(fundingTextField.text!)
+            targetTextField.text = String(fd! * self.rate)
+        }
     }
     
     private func updateExchangeRateLabel()
     {
-        self.exchangeRateLabel.text = "Lol"
+        do {
+            self.rate = try Currency.getCurrencyData(fundingAccount.currency, currencyB: targetAccount.currency)
+            self.exchangeRateLabel.text = "1 " + fundingAccount.currency + " = " + String(self.rate) + " " + targetAccount.currency
+        } catch {
+            print("An error occurred.")
+        }
+        
     }
     
     private func updateTargetAccountLabels()

@@ -11,5 +11,25 @@ import Foundation
 public class Currency
 {
 
+    static func getCurrencyData(currencyA: String, currencyB: String) throws -> Double
+    {
+        let r = Just.get("https://api.fixer.io/latest?base=" + currencyA)
+        var rate = 0.0
+        if let jsonData = r.json as? [String:AnyObject]
+        {
+            var rate = jsonData["rates"]
+            rate = rate![currencyB]
+            if rate == nil
+            {
+                throw RequestError.InvalidCurrency
+            }
+            if let val = rate!.doubleValue as? Double
+            {
+                return val
+            }
+
+        }
+        throw RequestError.InvalidCurrency
+    }
     
 }

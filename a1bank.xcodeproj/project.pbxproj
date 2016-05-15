@@ -33,6 +33,9 @@
 		DE54A6B61CE86FC400A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
 		DE54A6B71CE86FC400A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
 		DE54A6B81CE86FC400A3EBDE /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B51CE86FC400A3EBDE /* Just.swift */; };
+		DE54A6BA1CE880BB00A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
+		DE54A6BB1CE880BB00A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
+		DE54A6BC1CE880BB00A3EBDE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A6B91CE880BB00A3EBDE /* Error.swift */; };
 		DE5CF1411CB8C04400373128 /* accountViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */; };
 		DE5CF1431CB8C1F200373128 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */; };
 		DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CF1441CB8D3E900373128 /* AppState.swift */; };
@@ -112,6 +115,7 @@
 		DE54A68C1CE84CB100A3EBDE /* PickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerDialog.swift; sourceTree = "<group>"; };
 		DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopUpViewController.swift; sourceTree = "<group>"; };
 		DE54A6B51CE86FC400A3EBDE /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
+		DE54A6B91CE880BB00A3EBDE /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		DE5CF1401CB8C04400373128 /* accountViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = accountViewTableCell.xib; sourceTree = "<group>"; };
 		DE5CF1421CB8C1F200373128 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = ../AccountTableViewCell.swift; sourceTree = "<group>"; };
 		DE5CF1441CB8D3E900373128 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				DE54A68C1CE84CB100A3EBDE /* PickerDialog.swift */,
 				DE54A6B51CE86FC400A3EBDE /* Just.swift */,
+				DE54A6B91CE880BB00A3EBDE /* Error.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				DE5CF14B1CB8E48000373128 /* README.md in Sources */,
 				DEB137191CE1FBA000E1F17A /* BranchInfo.swift in Sources */,
 				1D1047CC60ACE12D99FEC553 /* BankAccountRepository.swift in Sources */,
+				DE54A6BA1CE880BB00A3EBDE /* Error.swift in Sources */,
 				DEB137151CE1FBA000E1F17A /* BankAccount.swift in Sources */,
 				DE54A6861CE8308D00A3EBDE /* Currency.swift in Sources */,
 				1D10475A957BDA86CE75A4D4 /* ApplicationService.swift in Sources */,
@@ -496,6 +502,7 @@
 				DEF505231CE716D4003A584E /* BankAccount.swift in Sources */,
 				DE5CF1561CB9127E00373128 /* HomeController.swift in Sources */,
 				DE5CF15E1CB9128C00373128 /* AppDelegate.swift in Sources */,
+				DE54A6BB1CE880BB00A3EBDE /* Error.swift in Sources */,
 				1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */,
 				DE5CF15C1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
 				DE54A6871CE8308D00A3EBDE /* Currency.swift in Sources */,
@@ -524,6 +531,7 @@
 				DEF505221CE716D3003A584E /* BankAccount.swift in Sources */,
 				DE5CF1571CB9127F00373128 /* HomeController.swift in Sources */,
 				DE5CF15F1CB9128C00373128 /* AppDelegate.swift in Sources */,
+				DE54A6BC1CE880BB00A3EBDE /* Error.swift in Sources */,
 				1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */,
 				DE5CF15D1CB9128900373128 /* AccountTableViewCell.swift in Sources */,
 				DE54A6881CE8308D00A3EBDE /* Currency.swift in Sources */,

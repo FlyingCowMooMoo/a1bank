@@ -707,12 +707,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accountCurrency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbl-lg-rPX">
-                                        <rect key="frame" x="0.0" y="262" width="600" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xF0-8Y-TE0">
                                         <rect key="frame" x="0.0" y="286" width="600" height="30"/>
                                         <state key="normal" title="Change Funding Source"/>
@@ -730,6 +724,9 @@
                                         <rect key="frame" x="340" y="362" width="240" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="fundingChanged:" destination="itX-Bj-nuX" eventType="editingChanged" id="Ajn-Da-uH4"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AUD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-Nk-INZ">
                                         <rect key="frame" x="14" y="324" width="240" height="21"/>
@@ -744,6 +741,9 @@
                                         <rect key="frame" x="20" y="362" width="240" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="targetChanged:" destination="itX-Bj-nuX" eventType="editingChanged" id="W4r-NW-QQm"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7F-WN-kx6">
                                         <rect key="frame" x="180" y="424" width="240" height="21"/>
@@ -758,6 +758,12 @@
                                         <rect key="frame" x="180" y="475" width="240" height="30"/>
                                         <state key="normal" title="Submit"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accountCurrency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbl-lg-rPX">
+                                        <rect key="frame" x="0.0" y="262" width="600" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="xF0-8Y-TE0" firstAttribute="leading" secondItem="xbl-lg-rPX" secondAttribute="leading" id="04S-Dh-QHU"/>
@@ -833,10 +839,12 @@
                         <outlet property="fundingAccountCurrency" destination="xbl-lg-rPX" id="ZHR-Nv-EqK"/>
                         <outlet property="fundingAccountName" destination="T0u-g4-3lC" id="ZeU-SL-8Ra"/>
                         <outlet property="fundingCurrencyLabel" destination="T9H-9B-C0V" id="rjw-oB-aNO"/>
+                        <outlet property="fundingTextField" destination="a7a-qf-aI6" id="iP2-3t-uqx"/>
                         <outlet property="targetAccountBalance" destination="1fC-YE-iyQ" id="3gQ-E2-2QS"/>
                         <outlet property="targetAccountCurrency" destination="57e-Yl-Dwl" id="HdR-Lx-Q6M"/>
                         <outlet property="targetAccountName" destination="5fp-zU-LUe" id="5bq-dJ-gCA"/>
                         <outlet property="targetCurrencyLabel" destination="T9H-9B-C0V" id="byC-c2-dwb"/>
+                        <outlet property="targetTextField" destination="NUi-Iq-bOJ" id="mTk-aN-f6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vA0-QN-SIe" userLabel="First Responder" sceneMemberID="firstResponder"/>

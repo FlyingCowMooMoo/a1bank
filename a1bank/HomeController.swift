@@ -17,6 +17,7 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     @IBAction func locateUsPressed(sender: UIButton)
