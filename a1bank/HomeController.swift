@@ -15,8 +15,14 @@ class HomeController: UIViewController {
     @IBOutlet var locateUsButton: UIButton!
     
     
+    @IBAction func mascotButtonPressed(sender: AnyObject)
+    {
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("mascotViewController") as! MascotViewController
+        presentViewController(controller, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        ApplicationService.populateData()
         
     }
 

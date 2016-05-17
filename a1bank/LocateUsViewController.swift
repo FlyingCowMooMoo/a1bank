@@ -65,7 +65,6 @@ class LocateUsViewController: UIViewController, UITableViewDataSource, UITableVi
         var b : BranchInfo
         b = data[indexPath.row] as! BranchInfo
         cell.textLabel?.text  = b.address
-        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton
         cell.accessoryType = UITableViewCellAccessoryType.None
         return cell
 

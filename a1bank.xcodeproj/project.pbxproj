@@ -13,6 +13,10 @@
 		1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */; };
 		1D104CACD1C5E5A8FD922A2F /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
 		1D104D6F0CED0107DBFC7B2C /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D104EE93767DE801F84DC8C /* ApplicationService.swift */; };
+		DE48DAF81CEAD8AA001B6963 /* MascotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48DAF71CEAD8AA001B6963 /* MascotViewController.swift */; };
+		DE48DAF91CEAD8AA001B6963 /* MascotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48DAF71CEAD8AA001B6963 /* MascotViewController.swift */; };
+		DE48DAFA1CEAD8AA001B6963 /* MascotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48DAF71CEAD8AA001B6963 /* MascotViewController.swift */; };
+		DE48DAFC1CEADEE3001B6963 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE48DAFB1CEADEE3001B6963 /* SceneKit.framework */; };
 		DE54A67D1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */; };
 		DE54A67E1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */; };
 		DE54A67F1CE7F40D00A3EBDE /* BranchInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */; };
@@ -141,6 +145,8 @@
 /* Begin PBXFileReference section */
 		1D10459E10860B46A8EF5F06 /* BankAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountRepository.swift; sourceTree = "<group>"; };
 		1D104EE93767DE801F84DC8C /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		DE48DAF71CEAD8AA001B6963 /* MascotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotViewController.swift; sourceTree = "<group>"; };
+		DE48DAFB1CEADEE3001B6963 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		DE54A67C1CE7F40D00A3EBDE /* BranchInfoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInfoRepository.swift; sourceTree = "<group>"; };
 		DE54A6801CE80F1A00A3EBDE /* dummybranches.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummybranches.csv; sourceTree = "<group>"; };
 		DE54A6851CE8308D00A3EBDE /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE48DAFC1CEADEE3001B6963 /* SceneKit.framework in Frameworks */,
 				DEB137041CE1C17700E1F17A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +230,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE48DAF21CEAD39E001B6963 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		DE54A6841CE82F8F00A3EBDE /* Rest */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +259,7 @@
 		DE54A6C21CE8A63500A3EBDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE48DAFB1CEADEE3001B6963 /* SceneKit.framework */,
 				DE54A6C31CE8A63500A3EBDE /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -289,6 +304,7 @@
 		DE745D541C9FC67C00D55A8B /* a1bank */ = {
 			isa = PBXGroup;
 			children = (
+				DE48DAF21CEAD39E001B6963 /* CustomView */,
 				DE54A68B1CE84CA000A3EBDE /* Utils */,
 				DE54A6841CE82F8F00A3EBDE /* Rest */,
 				DEF5051E1CE6F6AF003A584E /* CoreData */,
@@ -348,6 +364,7 @@
 				DE5CF1481CB8DEA900373128 /* AboutViewController.swift */,
 				DEB137051CE1C9F000E1F17A /* LocateUsViewController.swift */,
 				DE54A6901CE84D6800A3EBDE /* TopUpViewController.swift */,
+				DE48DAF71CEAD8AA001B6963 /* MascotViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -578,6 +595,7 @@
 				DE745D561C9FC67C00D55A8B /* AppDelegate.swift in Sources */,
 				DE745D841C9FC6B200D55A8B /* UserRepository.swift in Sources */,
 				DEB137061CE1C9F000E1F17A /* LocateUsViewController.swift in Sources */,
+				DE48DAF81CEAD8AA001B6963 /* MascotViewController.swift in Sources */,
 				DE67C4611CA90C7900A7151C /* BankAccountViewController.swift in Sources */,
 				DE67C45F1CA9087800A7151C /* AccountViewController.swift in Sources */,
 				DE5CF1451CB8D3E900373128 /* AppState.swift in Sources */,
@@ -614,6 +632,7 @@
 				DEF505231CE716D4003A584E /* BankAccount.swift in Sources */,
 				DE5CF1561CB9127E00373128 /* HomeController.swift in Sources */,
 				DE5CF15E1CB9128C00373128 /* AppDelegate.swift in Sources */,
+				DE48DAF91CEAD8AA001B6963 /* MascotViewController.swift in Sources */,
 				DE54A6BB1CE880BB00A3EBDE /* Error.swift in Sources */,
 				DE54A6D51CE8A96B00A3EBDE /* Utils.swift in Sources */,
 				1D104049695494D333801B44 /* BankAccountRepository.swift in Sources */,
@@ -644,6 +663,7 @@
 				DEF505221CE716D3003A584E /* BankAccount.swift in Sources */,
 				DE5CF1571CB9127F00373128 /* HomeController.swift in Sources */,
 				DE5CF15F1CB9128C00373128 /* AppDelegate.swift in Sources */,
+				DE48DAFA1CEAD8AA001B6963 /* MascotViewController.swift in Sources */,
 				DE54A6BC1CE880BB00A3EBDE /* Error.swift in Sources */,
 				DE54A6D61CE8A96B00A3EBDE /* Utils.swift in Sources */,
 				1D104B285588EE0C6B496395 /* BankAccountRepository.swift in Sources */,
@@ -897,6 +917,7 @@
 				DE54A6D11CE8A63500A3EBDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE745D4D1C9FC67C00D55A8B /* Build configuration list for PBXProject "a1bank" */ = {
 			isa = XCConfigurationList;

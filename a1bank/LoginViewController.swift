@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         self.applicationService = ApplicationService.instance
-        ApplicationService.populateData()
         
         super.viewDidLoad()
         if(AppState.sharedInstance.hasLoginErrors == false)
