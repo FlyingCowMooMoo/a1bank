@@ -15,7 +15,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: Selector("updateLabel:"), userInfo: nil, repeats: true)
+         timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: #selector(TodayViewController.updateLabel), userInfo: nil, repeats: true)
         updateLabel()
     }
     
@@ -25,7 +25,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // Dispose of any resources that can be recreated.
     }
     
-    private func updateLabel()
+    func updateLabel()
     {
         do
         {
