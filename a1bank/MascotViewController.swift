@@ -27,7 +27,7 @@ class MascotViewController: UIViewController
     @IBOutlet var mascotView: SCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(MascotViewController.tappy(_:)))
+        let gesture = UITapGestureRecognizer(target: self, action: Selector("tappy"))
         self.mascotView.addGestureRecognizer(gesture)
         
         self.cameraNode.camera = SCNCamera()
@@ -37,7 +37,7 @@ class MascotViewController: UIViewController
         
     }
     
-    func tappy(sender:UITapGestureRecognizer){
+    func tappy(){
         self.makeItRain()
         self.dropCoins()
     }
