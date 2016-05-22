@@ -14,6 +14,7 @@ public class Currency
     static func getCurrencyData(currencyA: String, currencyB: String) throws -> Double
     {
         let r = Just.get("https://api.fixer.io/latest?base=" + currencyA)
+        print(r)
         if let jsonData = r.json as? [String:AnyObject]
         {
             var rate = jsonData["rates"]
