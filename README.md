@@ -1,3 +1,4 @@
+# Use Xcode 7.2.1 as 7.3 and later using a different swift version which requires diffrent syntax for the Selector objects
 # iPhone Software Engineering Assignment <del>1</del> 2 
 ## RMIT Course: COSC2471 Semester 1 2016
 ## Fraud Bank, the iOS app 
@@ -7,6 +8,7 @@
 * Users can login
 * Users can manager multiple bank accounts under the same user/pass combo 
 * Minimal UI to keep everything lean and bold
+* Raining money in a 3d scene kit with Physics!
 
 
 #### Data Structures
