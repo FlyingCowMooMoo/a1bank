@@ -56,6 +56,10 @@ class LoginViewController: UIViewController {
         }
         else
         {
+            print("no")
+            errorLabel.highlighted = false
+            errorLabel.hidden = true
+            errorLabel.enabled = true
             AppState.sharedInstance.hasLoginErrors = true
             errorLabel.text = "Invalid credentials, please try again!"
             errorLabel.highlighted = true

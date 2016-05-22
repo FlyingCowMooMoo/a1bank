@@ -35,11 +35,13 @@ class UserRepository {
         do {
             results = try context.executeFetchRequest(request)
         } catch _ {
+            print("nil1")
             return nil
         }
         
         if results.count < 1
         {
+            print("nil2")
             return nil
         }
         else

@@ -28,6 +28,7 @@ class TopUpViewController: UIViewController
     @IBOutlet var fundingAccountCurrency: UILabel!
     
     @IBOutlet var targetCurrencyLabel: UILabel!
+
     @IBOutlet var fundingCurrencyLabel: UILabel!
     
     
@@ -153,7 +154,7 @@ class TopUpViewController: UIViewController
         }
         else
         {
-            popup("Error", msg: "Failed to buy money, please try again latert")
+            popup("Error", msg: "Failed to buy money, please try again later")
         }
         
     }
