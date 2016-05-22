@@ -34,6 +34,30 @@ class a1bankTests: XCTestCase {
         ApplicationService.createUser(Int32.max - 1, userName: "Lol", password: "Lol", firstName: "Lol", lastName: "lol", dob: NSDate(), email: "aa")
         XCTAssertTrue(ApplicationService.deleteUser(Int32.max - 1))
     }
+    
+    func checkDatabaseHasBranches()
+    {
+        let a = ApplicationService.getBranches()
+        var hasData = true
+        if a.isEmpty
+        {
+            hasData = false
+        }
+        XCTAssertTrue(hasData)
+    }
+    
+    func testAuthenticationWorks()
+    {
+        ApplicationService.createUser(Int32.max - 1, userName: "Lol", password: "Lol", firstName: "Lol", lastName: "lol", dob: NSDate(), email: "aa")
+        XCTAssertTrue(ApplicationService.authenticateUser("Lol", password: "Lol"))
+        ApplicationService.deleteUser(Int32.max - 1)
+    }
+    
+    func lol()
+    {
+        
+    }
+    
 
     
 }
