@@ -21,6 +21,19 @@ class a1bankTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testCreateUser()
+    {
+        XCTAssertTrue(ApplicationService.createUser(Int32.max - 1, userName: "Lol", password: "Lol", firstName: "Lol", lastName: "lol", dob: NSDate(), email: "aa"))
+        ApplicationService.deleteUser(Int32.max - 1)
+        
+    }
+    
+    func testDeleteUser()
+    {
+        ApplicationService.createUser(Int32.max - 1, userName: "Lol", password: "Lol", firstName: "Lol", lastName: "lol", dob: NSDate(), email: "aa")
+        XCTAssertTrue(ApplicationService.deleteUser(Int32.max - 1))
+    }
 
     
 }

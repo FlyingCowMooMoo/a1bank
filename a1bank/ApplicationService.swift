@@ -54,6 +54,11 @@ class ApplicationService {
         return instance.bankAccountRepository.getAccount(id)!
     }
     
+    static func deleteUser(id: Int32) -> Bool
+    {
+        return instance.userRepository.deleteUser(id)
+    }
+    
     static func getUserAccounts(userName: String) -> Set<BankAccount> {
         var accs = Set<BankAccount>()
         print("Getting account for user " + userName)
@@ -63,6 +68,11 @@ class ApplicationService {
         }
         print("NUmber of accounts is " + String(accs.count))
         return accs
+    }
+    
+    static func createUser(id: Int32, userName: String, password: String, firstName: String, lastName: String, dob: NSDate, email: String) -> Bool
+    {
+        return instance.userRepository.createUser(id, userName: userName, password: password, firstName: firstName, lastName: lastName, dob: dob, email: email)!
     }
     
     static func getBranches() -> Set<BranchInfo>

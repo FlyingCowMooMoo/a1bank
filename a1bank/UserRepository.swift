@@ -58,7 +58,6 @@ class UserRepository {
         
         }
         
-        return nil
     }
 
     func createUser(id: Int32, userName: String, password: String, firstName: String, lastName: String, dob: NSDate, email: String) -> Bool? {
@@ -88,6 +87,41 @@ class UserRepository {
         
         return true
     }
+    
+    func deleteUser(id: Int32) -> Bool
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var context:NSManagedObjectContext = appDelegate.managedObjectContext
+        var request = NSFetchRequest(entityName: "Users")
+        request.returnsObjectsAsFaults = false;
+        request.predicate = NSPredicate(format: "id = %i", id)
+        var results: NSArray
+        
+        do {
+            results = try context.executeFetchRequest(request)
+        } catch _ {
+            return false
+        }
+        
+        if results.count < 1
+        {
+            return false
+        }
+        else
+        {
+            print(results.count)
+            let r = results[0] as! NSManagedObject
+            context.deleteObject(r)
+            do {
+                try context.save()
+                return true
+            } catch _ {
+                return false
+            }
+            
+        }
+    }
+    
 
 }
 
