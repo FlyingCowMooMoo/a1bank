@@ -33,8 +33,6 @@ class TopUpViewController: UIViewController
     
     @IBOutlet var exchangeRateLabel: UILabel!
     
-    
-    
     @IBOutlet var targetTextField: UITextField!
     @IBOutlet var fundingTextField: UITextField!
     @IBAction func changeSourcePressed(sender: UIButton)
